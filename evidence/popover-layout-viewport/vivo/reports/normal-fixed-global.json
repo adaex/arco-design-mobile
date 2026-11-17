@@ -1,0 +1,51 @@
+{
+  "capturedAt": "2026-11-17T12:00:16.782Z",
+  "runId": "mwkn4lk6-4",
+  "device": "vivo-neo10plus",
+  "scenario": "normal",
+  "variant": "fixed",
+  "mode": "global",
+  "userAgent": "Mozilla/5.0 (Linux; Android 15; V2463A; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.6312.118 Mobile Safari/537.36 VivoBrowser/23.6.10.0",
+  "screen": {
+    "width": 360,
+    "availWidth": 360,
+    "height": 792,
+    "availHeight": 792
+  },
+  "window": {
+    "innerWidth": 360,
+    "innerHeight": 626,
+    "outerWidth": 360,
+    "outerHeight": 626,
+    "devicePixelRatio": 3
+  },
+  "document": {
+    "clientWidth": 360,
+    "clientHeight": 626
+  },
+  "visualViewport": {
+    "width": 360,
+    "height": 626,
+    "scale": 1,
+    "offsetLeft": 0
+  },
+  "anchor": {
+    "left": 160,
+    "right": 320,
+    "top": 80,
+    "bottom": 124,
+    "width": 160,
+    "height": 44
+  },
+  "popover": {
+    "left": 148,
+    "right": 328,
+    "top": 134,
+    "bottom": 209,
+    "width": 180,
+    "height": 75
+  },
+  "expectedRight": 328,
+  "rightDeltaFromExpected": 0,
+  "viewportOverflow": 0
+}

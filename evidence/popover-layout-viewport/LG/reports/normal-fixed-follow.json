@@ -1,0 +1,51 @@
+{
+  "capturedAt": "2026-11-17T12:00:26.484Z",
+  "runId": "mwkn4kva-1",
+  "device": "lg-velvet",
+  "scenario": "normal",
+  "variant": "fixed",
+  "mode": "follow",
+  "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Mobile Safari/537.36",
+  "screen": {
+    "width": 412,
+    "availWidth": 412,
+    "height": 938,
+    "availHeight": 938
+  },
+  "window": {
+    "innerWidth": 411,
+    "innerHeight": 836,
+    "outerWidth": 412,
+    "outerHeight": 938,
+    "devicePixelRatio": 2.625
+  },
+  "document": {
+    "clientWidth": 411,
+    "clientHeight": 836
+  },
+  "visualViewport": {
+    "width": 411.4285583496094,
+    "height": 836.1904907226562,
+    "scale": 1,
+    "offsetLeft": 0
+  },
+  "anchor": {
+    "left": 211.42857360839844,
+    "right": 371.42857360839844,
+    "top": 80,
+    "bottom": 124,
+    "width": 160,
+    "height": 44
+  },
+  "popover": {
+    "left": 199.42857360839844,
+    "right": 379.42857360839844,
+    "top": 134,
+    "bottom": 209,
+    "width": 180,
+    "height": 75
+  },
+  "expectedRight": 379.42857360839844,
+  "rightDeltaFromExpected": 0,
+  "viewportOverflow": 0
+}

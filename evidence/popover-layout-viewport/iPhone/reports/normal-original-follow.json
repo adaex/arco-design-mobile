@@ -1,0 +1,51 @@
+{
+  "capturedAt": "2026-11-17T12:00:14.277Z",
+  "runId": "mwkn4b55-0",
+  "device": "iphone16pro",
+  "scenario": "normal",
+  "variant": "original",
+  "mode": "follow",
+  "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1",
+  "screen": {
+    "width": 402,
+    "availWidth": 402,
+    "height": 874,
+    "availHeight": 874
+  },
+  "window": {
+    "innerWidth": 402,
+    "innerHeight": 678,
+    "outerWidth": 402,
+    "outerHeight": 874,
+    "devicePixelRatio": 3
+  },
+  "document": {
+    "clientWidth": 402,
+    "clientHeight": 678
+  },
+  "visualViewport": {
+    "width": 402,
+    "height": 678,
+    "scale": 1,
+    "offsetLeft": 0
+  },
+  "anchor": {
+    "left": 202,
+    "right": 362,
+    "top": 80,
+    "bottom": 124,
+    "width": 160,
+    "height": 44
+  },
+  "popover": {
+    "left": 190,
+    "right": 370,
+    "top": 134,
+    "bottom": 208,
+    "width": 180,
+    "height": 74
+  },
+  "expectedRight": 370,
+  "rightDeltaFromExpected": 0,
+  "viewportOverflow": 0
+}
