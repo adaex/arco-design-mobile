@@ -17,7 +17,7 @@ No device-metrics override, UA override, or JavaScript property mocks were used.
 
 The page reads `getBoundingClientRect()` and viewport properties after the popover opens, displays the values on the page, and posts the same snapshot to the per-run JSON report. Red outlines mark the original implementation, green outlines mark the fix, blue outlines mark the anchor, and the dashed green line marks the expected right edge.
 
-Comparison images are generated from the raw screenshots by adding headers and metric footers. Browser chrome, local network addresses, and remote-control status indicators are cropped out. Popover pixels and geometry are not edited. Cropped raw screenshots, run IDs, and raw JSON are included alongside the comparisons.
+Comparison images are generated from the raw screenshots by adding headers and metric footers. Browser chrome, local network addresses, and remote-control status indicators are cropped or masked. Popover pixels and geometry are not edited. Sanitized raw screenshots, run IDs, and raw JSON are included alongside the comparisons.
 
 ## Devices and results
 
@@ -54,8 +54,21 @@ The LG operating system version uses the recorded physical-device system version
 - [Fixed global comparison](iPhone/comparison-global.png)
 - [Raw screenshots and JSON](iPhone/)
 
-See [manifest.json](manifest.json) for all 18 runs, including run IDs, UA strings, viewport values, coordinates, and report paths.
+### Physical foldable follow-up
 
-## Remaining boundary
+- [iPhone Duo and Android PHN110 evidence](foldable/README.md)
+- [iPhone Duo unfolded comparison](foldable/iPhone-Duo/comparison-unfolded.png)
+- [iPhone Duo folded comparison](foldable/iPhone-Duo/comparison-folded.png)
+- [Android PHN110 folded / unfolded comparison](foldable/Android-PHN110/comparison.png)
 
-Physical foldable hardware has not been verified. The real-device evidence covers two Android devices and one iOS WebKit device, while the fixed-width H5 scenario exercises the same coordinate mismatch addressed by the PR.
+See [manifest.json](manifest.json) for the initial 18 runs and the 8 foldable reports, including run IDs, UA strings, viewport values, coordinates, and report paths.
+
+## Physical foldable follow-up
+
+Two additional physical foldable devices were checked after the initial matrix:
+
+- iPhone Duo unfolded: original right edge `460` versus expected `648` (`-188px`); fixed right edge `648` with zero overflow
+- iPhone Duo folded: original and fixed right edge both `310`, unchanged
+- Android PHN110 folded and unfolded: original and fixed positions unchanged, with zero overflow
+
+The iPhone Duo unfolded result verifies both the original issue and the fix on physical foldable hardware. The other states provide no-regression coverage. See the [foldable evidence README](foldable/README.md) for the full data and sanitization notes.

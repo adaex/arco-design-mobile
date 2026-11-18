@@ -301,5 +301,103 @@
         "viewportOverflow": 0
       }
     ]
-  }
+  },
+  "physicalFoldables": [
+    {
+      "device": "iPhone Duo",
+      "state": "folded",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0 Mobile/15E148 Safari/604.1",
+      "screenAvailWidth": 466,
+      "clientWidth": 342,
+      "original": {
+        "runId": "mwlkgi2o-5-original",
+        "report": "foldable/iPhone-Duo/reports/folded-original.json",
+        "popoverRight": 310,
+        "expectedRight": 310,
+        "rightDeltaFromExpected": 0,
+        "viewportOverflow": 0
+      },
+      "fixed": {
+        "runId": "mwlkgi2p-5-fixed",
+        "report": "foldable/iPhone-Duo/reports/folded-fixed.json",
+        "popoverRight": 310,
+        "expectedRight": 310,
+        "rightDeltaFromExpected": 0,
+        "viewportOverflow": 0
+      },
+      "screenshot": "foldable/iPhone-Duo/folded.png"
+    },
+    {
+      "device": "iPhone Duo",
+      "state": "unfolded",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0 Mobile/15E148 Safari/604.1",
+      "screenAvailWidth": 466,
+      "clientWidth": 680,
+      "original": {
+        "runId": "mwlkfxwt-4-original",
+        "report": "foldable/iPhone-Duo/reports/unfolded-original.json",
+        "popoverRight": 460,
+        "expectedRight": 648,
+        "rightDeltaFromExpected": -188,
+        "viewportOverflow": 0
+      },
+      "fixed": {
+        "runId": "mwlkfxwu-4-fixed",
+        "report": "foldable/iPhone-Duo/reports/unfolded-fixed.json",
+        "popoverRight": 648,
+        "expectedRight": 648,
+        "rightDeltaFromExpected": 0,
+        "viewportOverflow": 0
+      },
+      "screenshot": "foldable/iPhone-Duo/unfolded.png"
+    },
+    {
+      "device": "Android foldable (PHN110)",
+      "state": "folded",
+      "userAgent": "Mozilla/5.0 (Linux; U; Android 16; zh-cn; PHN110 Build/BP2A.250605.015) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/115.0.5790.168 Mobile Safari/537.36 HeyTapBrowser/40.10.7.1",
+      "screenAvailWidth": 344,
+      "clientWidth": 304,
+      "original": {
+        "runId": "mwllbpyj-1-original",
+        "report": "foldable/Android-PHN110/reports/folded-original.json",
+        "popoverRight": 272,
+        "expectedRight": 272.00000762939453,
+        "rightDeltaFromExpected": -7.62939453125e-06,
+        "viewportOverflow": 0
+      },
+      "fixed": {
+        "runId": "mwllbpyk-1-fixed",
+        "report": "foldable/Android-PHN110/reports/folded-fixed.json",
+        "popoverRight": 272,
+        "expectedRight": 272.00000762939453,
+        "rightDeltaFromExpected": -7.62939453125e-06,
+        "viewportOverflow": 0
+      },
+      "screenshot": "foldable/Android-PHN110/folded.png"
+    },
+    {
+      "device": "Android foldable (PHN110)",
+      "state": "unfolded",
+      "userAgent": "Mozilla/5.0 (Linux; U; Android 16; zh-cn; PHN110 Build/BP2A.250605.015) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/115.0.5790.168 Mobile Safari/537.36 HeyTapBrowser/40.10.7.1",
+      "screenAvailWidth": 698,
+      "clientWidth": 658,
+      "original": {
+        "runId": "mwllesnz-2-original",
+        "report": "foldable/Android-PHN110/reports/unfolded-original.json",
+        "popoverRight": 626.1538696289062,
+        "expectedRight": 626.1538696289062,
+        "rightDeltaFromExpected": 0,
+        "viewportOverflow": 0
+      },
+      "fixed": {
+        "runId": "mwlleso3-2-fixed",
+        "report": "foldable/Android-PHN110/reports/unfolded-fixed.json",
+        "popoverRight": 626.1538696289062,
+        "expectedRight": 626.1538696289062,
+        "rightDeltaFromExpected": 0,
+        "viewportOverflow": 0
+      },
+      "screenshot": "foldable/Android-PHN110/unfolded.png"
+    }
+  ]
 }

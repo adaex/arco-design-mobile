@@ -1,0 +1,51 @@
+{
+  "capturedAt": "2026-11-18T03:59:58.193Z",
+  "runId": "mwlleso3-2-fixed",
+  "device": "manual-fold",
+  "scenario": "normal",
+  "variant": "fixed",
+  "mode": "follow",
+  "userAgent": "Mozilla/5.0 (Linux; U; Android 16; zh-cn; PHN110 Build/BP2A.250605.015) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/115.0.5790.168 Mobile Safari/537.36 HeyTapBrowser/40.10.7.1",
+  "screen": {
+    "width": 698,
+    "availWidth": 698,
+    "height": 751,
+    "availHeight": 751
+  },
+  "window": {
+    "innerWidth": 658,
+    "innerHeight": 190,
+    "outerWidth": 698,
+    "outerHeight": 613,
+    "devicePixelRatio": 3.25
+  },
+  "document": {
+    "clientWidth": 658,
+    "clientHeight": 190
+  },
+  "visualViewport": {
+    "width": 658,
+    "height": 190,
+    "scale": 1,
+    "offsetLeft": 0
+  },
+  "anchor": {
+    "left": 458.15386962890625,
+    "right": 618.1538696289062,
+    "top": 40,
+    "bottom": 84,
+    "width": 160,
+    "height": 44
+  },
+  "popover": {
+    "left": 446.15386962890625,
+    "right": 626.1538696289062,
+    "top": 94,
+    "bottom": 160,
+    "width": 180,
+    "height": 66
+  },
+  "expectedRight": 626.1538696289062,
+  "rightDeltaFromExpected": 0,
+  "viewportOverflow": 0
+}
