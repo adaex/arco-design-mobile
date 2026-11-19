@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Notify · 更新关闭回调</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/style.min.css">
+  <style>
+    html { font-size: 50px }
+    body { margin: 0; font: 16px/1.6 -apple-system, BlinkMacSystemFont, sans-serif; color: #1d2129; background: white }
+    main { max-width: 640px; margin: auto; padding: 50px 18px 24px }
+    h1 { font-size: 22px } button { font: inherit; padding: 6px 12px; margin: 0 8px 12px 0 }
+    table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums }
+    th, td { padding: 6px; border-bottom: 1px solid #d6d9de; text-align: left }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Notify 关闭后还剩几个节点？</h1>
+    <p>依次点两个按钮。每组都向空容器打开通知，完全展开后自动关闭，再等待 500 毫秒读取容器</p>
+    <button id="control">直接关闭</button><button id="changed">更新 onClose 再关闭</button>
+    <table>
+      <thead><tr><th>操作</th><th>原回调次数</th><th>新回调次数</th><th>剩余节点</th></tr></thead>
+      <tbody>
+        <tr><th>直接关闭</th><td id="control-original">—</td><td>—</td><td id="control-left">—</td></tr>
+        <tr><th>更新再关闭</th><td id="changed-original">—</td><td id="changed-updated">—</td><td id="changed-left">—</td></tr>
+      </tbody>
+    </table>
+    <p id="status" role="status"></p>
+  </main>
+  <div id="control-host"></div><div id="changed-host"></div>
+  <script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-transition-group@4.4.2/dist/react-transition-group.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/index.min.js"></script>
+  <script>
+    const byId = id => document.getElementById(id);
+    const delay = ms => new Promise(done => setTimeout(done, ms));
+
+    async function run(id) {
+      const host = byId(id + '-host');
+      const label = byId(id).textContent;
+      byId(id).disabled = true;
+      let original = 0, updated = 0;
+      const handle = Arco.Notify.info({
+        content: label, className: 'sample-notice', duration: 0, transitionDuration: 200,
+        getContainer: () => host,
+        onClose: () => { original += 1; }
+      });
+      const deadline = performance.now() + 2000;
+      while (true) {
+        const node = host.querySelector('.sample-notice');
+        const height = node && parseFloat(node.style.height);
+        if (height > 0 && Math.abs(node.getBoundingClientRect().height - height) < 1) break;
+        if (performance.now() > deadline) {
+          handle.close();
+          byId('status').textContent = '通知未完全展开，请刷新再试';
+          return;
+        }
+        await delay(20);
+      }
+      if (id === 'changed') handle.update({ onClose: () => { updated += 1; } });
+      handle.close();
+      await delay(500);
+      byId(id + '-original').textContent = original;
+      if (id === 'changed') byId('changed-updated').textContent = updated;
+      byId(id + '-left').textContent = host.childElementCount;
+      byId('status').textContent = '已读取「' + label + '」的容器';
+    }
+    for (const id of ['control', 'changed']) byId(id).onclick = () => run(id);
+  </script>
+</body>
+</html>

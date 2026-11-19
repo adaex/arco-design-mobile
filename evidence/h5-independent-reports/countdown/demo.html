@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CountDown · 同时启动两个一秒倒计时</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/style.min.css">
+  <style>
+    html { font-size: 50px }
+    body { margin: 0; font: 16px/1.6 -apple-system, BlinkMacSystemFont, sans-serif; color: #1d2129; background: white }
+    main { max-width: 600px; margin: auto; padding: 20px 18px }
+    h1 { font-size: 22px } button { font: inherit; padding: 6px 12px }
+    #timers { margin: 12px 0 } #events { padding-left: 1.6em; font-variant-numeric: tabular-nums }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>两个一秒倒计时何时结束？</h1>
+    <p>点按钮后保持页面在前台，比较两个倒计时的结束回调时间</p>
+    <button id="start">同时启动 A 和 B</button>
+    <div id="timers"></div>
+    <ol id="events" aria-live="polite"></ol>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-transition-group@4.4.2/dist/react-transition-group.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/index.min.js"></script>
+  <script>
+    const h = React.createElement;
+    const events = document.getElementById('events');
+    function log(text) {
+      const item = document.createElement('li');
+      item.textContent = text;
+      events.appendChild(item);
+    }
+    function Pair() {
+      const a = React.useRef(null), b = React.useRef(null);
+      const started = React.useRef(0);
+      React.useEffect(() => {
+        started.current = performance.now();
+        a.current.start();
+        b.current.start();
+        log('A 和 B 已同时启动');
+      }, []);
+      function timer(label, ref) {
+        return h('p', {key: label}, label + '　', h(Arco.CountDown, {
+          time: 1000, format: 's', autoStart: false, ref,
+          onFinish: () => log(label + ' 收到 onFinish，启动后 ' + Math.round(performance.now() - started.current) + ' 毫秒')
+        }));
+      }
+      return h(React.Fragment, null, timer('A', a), timer('B', b));
+    }
+    let run = 0;
+    document.getElementById('start').onclick = () => {
+      events.replaceChildren();
+      ReactDOM.render(h(Pair, {key: ++run}), document.getElementById('timers'));
+    };
+  </script>
+</body>
+</html>

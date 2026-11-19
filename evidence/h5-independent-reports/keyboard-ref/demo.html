@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyboard 首次显示时的节点引用</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/style.min.css">
+  <style>
+    html { font-size: 50px; }
+    body { margin: 0; color: #18202b; font: 16px/1.5 system-ui, sans-serif; }
+    main { padding: 20px; max-width: 620px; margin: auto; }
+    h1 { font-size: 22px; }
+    .action { font: inherit; padding: 7px 14px; border: 1px solid #8090a0; border-radius: 5px; color: #17263a; background: white; }
+    .readout { font: 15px/1.45 system-ui, sans-serif; padding: 8px; text-align: center; }
+    output { display: block; white-space: pre-line; padding-top: 6px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>首次显示的键盘</h1>
+    <p>打开键盘，等数字出现后点「读取键盘引用」，比较页面上的键盘与组件返回的节点</p>
+    <button type="button" class="action" id="open">打开键盘</button>
+  </main>
+  <div id="root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-transition-group@4.4.2/dist/react-transition-group.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/index.min.js"></script>
+  <script>
+    const h = React.createElement;
+    const root = document.getElementById('root');
+    document.getElementById('open').onclick = event => {
+      event.stopPropagation();
+      const ref = React.createRef();
+      function readKeyboard() {
+        const node = document.querySelector('.demo-keyboard');
+        const keys = node.querySelectorAll('.arco-keyboard-key').length;
+        const handle = ref.current;
+        const value = !handle ? '尚未取得组件引用' : handle.keyboard === node ? '指向屏幕上的键盘' : String(handle.keyboard);
+        document.querySelector('output').textContent = `屏幕上的键盘：${keys} 个按键\nref.current.keyboard：${value}`;
+      }
+      const title = h('div', { className: 'readout' },
+        h('button', {type: 'button', className: 'action', onClick: readKeyboard}, '读取键盘引用'),
+        h('output', {'aria-live': 'polite'})
+      );
+      ReactDOM.render(h(Arco.Keyboard, {
+        ref, visible: true, title, className: 'demo-keyboard', close: () => ReactDOM.unmountComponentAtNode(root)
+      }), root);
+    };
+  </script>
+</body>
+</html>

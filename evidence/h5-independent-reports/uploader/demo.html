@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Uploader 文件长按</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/style.min.css">
+  <style>
+    html { font-size: 50px }
+    body { margin: 0; color: #1d2129; font: 16px/1.5 system-ui,sans-serif }
+    main { padding: 20px; max-width: 500px; margin: auto }
+    h1 { margin: 0; font-size: 22px } p { margin: 8px 0 14px }
+    .arco-uploader-list-item { min-height: 56px; display: flex; align-items: center; border: 1px solid #9dabbb; border-radius: 6px; padding: 0 8px; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none }
+    .arco-uploader-list-item-container { flex: 1 }
+    dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; margin-top: 18px } dd { margin: 0; font-variant-numeric: tabular-nums }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>文件长按</h1>
+    <p>用手指按住文件行中央约 1.2 秒再松开，避开右侧删除按钮。桌面 Chrome 可开启设备模拟并选择触屏设备</p>
+    <div id="uploader"></div>
+    <dl aria-live="polite">
+      <dt>原生触摸事件</dt><dd id="events">等待触摸</dd>
+      <dt>按住时长</dt><dd id="duration">—</dd>
+      <dt>最大偏移</dt><dd id="drift">—</dd>
+      <dt>本次 onLongPress</dt><dd id="calls">0 次</dd>
+    </dl>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-transition-group@4.4.2/dist/react-transition-group.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/index.min.js"></script>
+  <script>
+    const host = document.getElementById('uploader');
+    const file = new File(['H5'], '长按验证.txt', { type: 'text/plain' });
+    let gesture;
+    let calls = 0;
+    const show = (id, text) => { document.getElementById(id).textContent = text; };
+    ReactDOM.render(React.createElement(Arco.Uploader, {
+      files: [{ file, status: 'loaded' }], limit: 1, hideStatus: true,
+      onLongPress(event, item, index) {
+        calls += 1;
+        show('calls', `${calls} 次（${item.file.name}，下标 ${index}）`);
+      }
+    }), host);
+
+    function observe(event) {
+      if (!event.isTrusted) return;
+      if (event.type === 'touchstart') {
+        if (event.touches.length !== 1 || !event.target.closest('.arco-uploader-list-item') || event.target.closest('.arco-uploader-list-item-delete')) return;
+        const point = event.changedTouches[0];
+        gesture = { id: point.identifier, x: point.clientX, y: point.clientY, time: event.timeStamp, drift: 0 };
+        calls = 0;
+        show('events', 'touchstart'); show('duration', '按住中'); show('drift', '0 px'); show('calls', '0 次');
+        return;
+      }
+      if (!gesture) return;
+      const point = Array.from(event.changedTouches).find(touch => touch.identifier === gesture.id);
+      if (!point) return;
+      gesture.drift = Math.max(gesture.drift, Math.hypot(point.clientX - gesture.x, point.clientY - gesture.y));
+      show('drift', `${Math.round(gesture.drift)} px`);
+      if (event.type === 'touchmove') return;
+      show('duration', `${Math.round(event.timeStamp - gesture.time)} ms`);
+      show('events', `touchstart → ${event.type}`);
+      gesture = null;
+    }
+    for (const type of ['touchstart', 'touchmove', 'touchend', 'touchcancel']) {
+      host.addEventListener(type, observe, { capture: true, passive: true });
+    }
+  </script>
+</body>
+</html>
