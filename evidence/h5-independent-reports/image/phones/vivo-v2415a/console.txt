@@ -1,0 +1,17 @@
+Run 694589f2
+
+control
++0.1 ms  ReactDOM.render
++8.0 ms  DOM load
+  event=load#1  node=img#1  trusted=true
++8.9 ms  Image.onLoad
+  event=load#1  node=img#1  trusted=true
+
+changed
++0.0 ms  ReactDOM.render
++1.5 ms  Image.onLoad
+  event=null  node=img#2
++3.4 ms  DOM load
+  event=load#2  node=img#2  trusted=true
++3.7 ms  Image.onLoad
+  event=load#2  node=img#2  trusted=true

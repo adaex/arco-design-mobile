@@ -1,0 +1,19 @@
+Run e0dd0275
+
+control
++0.0 ms  ReactDOM.render
++6.0 ms  Image.onLoad
+  event=null  node=img#1
++6.0 ms  DOM load
+  event=load#1  node=img#1  trusted=true
++7.0 ms  Image.onLoad
+  event=load#1  node=img#1  trusted=true
+
+changed
++0.0 ms  ReactDOM.render
++1.0 ms  Image.onLoad
+  event=null  node=img#2
++2.0 ms  DOM load
+  event=load#2  node=img#2  trusted=true
++2.0 ms  Image.onLoad
+  event=load#2  node=img#2  trusted=true

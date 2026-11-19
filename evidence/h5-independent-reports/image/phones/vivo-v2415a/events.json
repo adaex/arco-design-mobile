@@ -1,0 +1,70 @@
+{
+  "run": "Run 694589f2",
+  "utc": "2026-11-19T16:34:15.555Z",
+  "react": "16.14.0",
+  "events": [
+    {
+      "group": "control",
+      "line": "+0.1 ms  ReactDOM.render",
+      "tag": null,
+      "eventType": null,
+      "trusted": null,
+      "matchesMountedImage": null,
+      "isCapturedEvent": null
+    },
+    {
+      "group": "control",
+      "line": "+8.0 ms  DOM load\n  event=load#1  node=img#1  trusted=true",
+      "tag": "IMG",
+      "eventType": "load",
+      "trusted": true,
+      "matchesMountedImage": true,
+      "isCapturedEvent": true
+    },
+    {
+      "group": "control",
+      "line": "+8.9 ms  Image.onLoad\n  event=load#1  node=img#1  trusted=true",
+      "tag": "IMG",
+      "eventType": "load",
+      "trusted": true,
+      "matchesMountedImage": true,
+      "isCapturedEvent": true
+    },
+    {
+      "group": "changed",
+      "line": "+0.0 ms  ReactDOM.render",
+      "tag": null,
+      "eventType": null,
+      "trusted": null,
+      "matchesMountedImage": null,
+      "isCapturedEvent": null
+    },
+    {
+      "group": "changed",
+      "line": "+1.5 ms  Image.onLoad\n  event=null  node=img#2",
+      "tag": "IMG",
+      "eventType": null,
+      "trusted": null,
+      "matchesMountedImage": true,
+      "isCapturedEvent": null
+    },
+    {
+      "group": "changed",
+      "line": "+3.4 ms  DOM load\n  event=load#2  node=img#2  trusted=true",
+      "tag": "IMG",
+      "eventType": "load",
+      "trusted": true,
+      "matchesMountedImage": true,
+      "isCapturedEvent": true
+    },
+    {
+      "group": "changed",
+      "line": "+3.7 ms  Image.onLoad\n  event=load#2  node=img#2  trusted=true",
+      "tag": "IMG",
+      "eventType": "load",
+      "trusted": true,
+      "matchesMountedImage": true,
+      "isCapturedEvent": true
+    }
+  ]
+}

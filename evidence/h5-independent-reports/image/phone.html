@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Image · 缓存图片的加载回调</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/style.min.css">
+  <style>
+    html {font-size:50px} body {margin:0;color:#18212a;background:white;font:15px/1.4 system-ui,sans-serif}
+    main {max-width:620px;margin:auto;padding:10px 12px} h1 {font-size:18px;margin:0} h2 {font-size:15px;margin:12px 0 4px}
+    #run {font:inherit} #run-id {font:13px monospace} pre {font:13px/1.4 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:5px 0}
+    .mount {max-width:100%}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Image.onLoad · 2.39.1</h1>
+    <button id="run" type="button" disabled>运行对照</button> <span id="run-id"></span>
+    <section id="control"><h2>只读取宽度</h2><div class="mount"></div><pre class="result" role="log"></pre></section>
+    <section id="changed"><h2>读取宽度并更新布局</h2><div class="mount"></div><pre class="result" role="log"></pre></section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-transition-group@4.4.2/dist/react-transition-group.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/index.min.js"></script>
+  <script>
+    const png = 'iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAIAAADbtmxLAAAAvklEQVR4nO3TwQmAMAwF0IzkDo7j1blcxjXEq1cFQUqbJk1KTEDhHwN5/KawbkeogLvgB0UG7csYBXRR0jiDMg1t+h4I1RCm7zUUEVSaiEkxaJinHhY7IwNdmjt2XQpAj8bU1ArKNHamJhCqMTLxIELTYpKiGRCroU2KIilQo6a2Uve4VZBIU65UHxwOUmjSlT2fAAGpNZ0Hh4OsNawJ3tfQJnDRECbw0tRM4KhBTeCrKU0hQKkpCugxBQLdOQFOua/Q4GFfywAAAABJRU5ErkJggg==';
+    const bytes = Uint8Array.from(atob(png), c => c.charCodeAt(0));
+    const src = URL.createObjectURL(new Blob([bytes], {type: 'image/png'}));
+    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+    const h = React.createElement;
+
+    function Panel({updateLayout, onLoad}) {
+      const panel = React.useRef(null);
+      const [width, setWidth] = React.useState(null);
+      React.useLayoutEffect(() => {
+        const measured = panel.current.getBoundingClientRect().width;
+        if (updateLayout) setWidth(measured);
+      }, []);
+      const direction = width !== null && width < 680 ? 'column' : 'row';
+      return h('div', {ref: panel, style: {display: 'flex', flexDirection: direction, gap: '6px'}},
+        h(Arco.Image, {staticLabel: true, src, width: 48, height: 32, alt: '缓存样图', onLoad}), h('span', null, '同一张缓存图'));
+    }
+
+    function objectIds() {
+      const ids = new WeakMap();
+      let next = 1;
+      return value => {
+        if (!ids.has(value)) ids.set(value, next++);
+        return ids.get(value);
+      };
+    }
+    const imageId = objectIds();
+    const eventId = objectIds();
+
+    async function measure(section, updateLayout) {
+      const mount = section.querySelector('.mount');
+      const output = section.querySelector('.result');
+      ReactDOM.unmountComponentAtNode(mount);
+      const warm = new window.Image();
+      await new Promise((resolve, reject) => {
+        warm.onload = resolve;
+        warm.onerror = () => reject(new Error('预载图片失败'));
+        warm.src = src;
+      });
+      await delay(0);
+      output.textContent = '';
+      let receivedNativeLoad = false;
+      const start = performance.now();
+      function trace(source, event, image) {
+        const elapsed = (performance.now() - start).toFixed(1);
+        let line = `+${elapsed} ms  ${source}`;
+        if (image) {
+          const value = event === null ? 'null' : `${event.type}#${eventId(event)}`;
+          line += `\n  event=${value}  node=img#${imageId(image)}`;
+          if (event) line += `  trusted=${event.isTrusted}`;
+          console.log(section.id, line, event, image);
+        } else {
+          console.log(section.id, line);
+        }
+        output.append(document.createTextNode(line + '\n'));
+      }
+      function capture(event) {
+        if (event.target !== mount.querySelector('img')) return;
+        trace('DOM load', event, event.target);
+        receivedNativeLoad = true;
+      }
+      mount.addEventListener('load', capture, true);
+      try {
+        trace('ReactDOM.render');
+        ReactDOM.render(h(Panel, {updateLayout, onLoad(event, image) {
+          trace('Image.onLoad', event, image);
+        }}), mount);
+        const deadline = performance.now() + 4000;
+        while (!receivedNativeLoad && performance.now() < deadline) await delay(20);
+        await delay(150);
+        if (!receivedNativeLoad) throw new Error('未收到图片的原生 load，请重新运行');
+      } finally {
+        mount.removeEventListener('load', capture, true);
+      }
+    }
+
+    const run = document.querySelector('#run');
+    run.disabled = false;
+    run.onclick = async () => {
+      run.disabled = true;
+      const id = Array.from(crypto.getRandomValues(new Uint8Array(4)), n => n.toString(16).padStart(2, '0')).join('');
+      document.getElementById('run-id').textContent = 'Run ' + id;
+      try {
+        for (const section of document.querySelectorAll('section')) {
+          const output = section.querySelector('.result');
+          output.textContent = '正在加载…';
+          try { await measure(section, section.id === 'changed'); }
+          catch (error) { output.textContent = error.message; }
+        }
+      } finally { run.disabled = false; }
+    };
+  </script>
+</body>
+</html>
