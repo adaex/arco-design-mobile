@@ -1,0 +1,37 @@
+{
+  "device": "vivo V2415A",
+  "system": "Android 15",
+  "browser": "vivo 浏览器 23.3.10.2",
+  "commit": "c166b40e5f48e647a273831fca01d00d82e0c953",
+  "run": "76e357cd",
+  "events": [
+    {
+      "source": "DOM touchstart",
+      "ms": 0.1,
+      "id": 0,
+      "trusted": true,
+      "row": "长按验证.txt"
+    },
+    {
+      "source": "Uploader.onLongPress",
+      "ms": 752.3,
+      "call": 1,
+      "file": "长按验证.txt",
+      "index": 0
+    },
+    {
+      "source": "DOM touchend",
+      "ms": 1257.8,
+      "id": 0,
+      "trusted": true,
+      "heldMs": 1256,
+      "maxDriftPx": 0
+    },
+    {
+      "source": "读取 onLongPress 次数",
+      "ms": 1860.5,
+      "afterEndMs": 602,
+      "calls": 1
+    }
+  ]
+}

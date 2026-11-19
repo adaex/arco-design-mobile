@@ -1,0 +1,37 @@
+{
+  "device": "iPhone 16 Pro",
+  "system": "iOS 18.4.1",
+  "browser": "Safari 18.4",
+  "commit": "c166b40e5f48e647a273831fca01d00d82e0c953",
+  "run": "ce90d1fc",
+  "events": [
+    {
+      "source": "DOM touchstart",
+      "ms": 0,
+      "id": 2099632289,
+      "trusted": true,
+      "row": "长按验证.txt"
+    },
+    {
+      "source": "Uploader.onLongPress",
+      "ms": 754,
+      "call": 1,
+      "file": "长按验证.txt",
+      "index": 0
+    },
+    {
+      "source": "DOM touchend",
+      "ms": 1244,
+      "id": 2099632289,
+      "trusted": true,
+      "heldMs": 1250,
+      "maxDriftPx": 0
+    },
+    {
+      "source": "读取 onLongPress 次数",
+      "ms": 1845,
+      "afterEndMs": 601,
+      "calls": 1
+    }
+  ]
+}

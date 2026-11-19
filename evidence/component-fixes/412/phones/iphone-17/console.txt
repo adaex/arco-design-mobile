@@ -1,0 +1,10 @@
+Run a05087bf
+commit c166b40e5f48e647a273831fca01d00d82e0c953
++0 ms  DOM touchstart
+  id=1533937774 trusted=true row=长按验证.txt
++754 ms  Uploader.onLongPress
+  call=1 file=长按验证.txt index=0
++1243 ms  DOM touchend
+  id=1533937774 trusted=true heldMs=1250 maxDriftPx=0
++1844 ms  读取 onLongPress 次数
+  afterEndMs=600 calls=1

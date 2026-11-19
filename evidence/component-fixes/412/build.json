@@ -1,0 +1,13 @@
+{
+  "case": "uploader",
+  "issue": 412,
+  "commit": "c166b40e5f48e647a273831fca01d00d82e0c953",
+  "base": "53875e1780e9a53a8c86dd959803e980ebb2c715",
+  "bundleSha256": "7498b1a4b8bc46a7da2de84a9dd65d3190a9324d5cc0896f06423c207e82f1d8",
+  "entry": "packages/arcodesign/components/uploader/index.tsx",
+  "productFiles": [
+    "packages/arcodesign/components/uploader/index.tsx",
+    "packages/arcodesign/components/uploader/upload/upload.ts"
+  ],
+  "esbuild": "0.15.18"
+}

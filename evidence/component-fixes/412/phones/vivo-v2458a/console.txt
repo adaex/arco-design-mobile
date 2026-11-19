@@ -1,0 +1,10 @@
+Run 73fae8e3
+commit c166b40e5f48e647a273831fca01d00d82e0c953
++0.2 ms  DOM touchstart
+  id=0 trusted=true row=长按验证.txt
++755.1 ms  Uploader.onLongPress
+  call=1 file=长按验证.txt index=0
++1258.7 ms  DOM touchend
+  id=0 trusted=true heldMs=1261 maxDriftPx=0
++1860.3 ms  读取 onLongPress 次数
+  afterEndMs=601 calls=1
