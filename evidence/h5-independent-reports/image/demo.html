@@ -8,20 +8,20 @@
   <style>
     html { font-size: 50px }
     body { margin: 0; font: 16px/1.55 system-ui, sans-serif; color: #20242a; background: white }
-    main { max-width: 580px; margin: auto; padding: 20px }
+    main { max-width: 760px; margin: auto; padding: 20px }
     h1 { font-size: 24px } h2 { font-size: 18px; margin: 0 0 8px }
     section { border-top: 1px solid #ddd; margin-top: 18px; padding-top: 12px }
     button { padding: 8px 14px; font: inherit; cursor: pointer }
-    p { margin: 8px 0 } .result { white-space: pre-line }
+    p { margin: 8px 0 } pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px }
   </style>
 </head>
 <body>
   <main>
     <h1>缓存图片的加载回调</h1>
-    <p>两组都先预载同一张 PNG，再挂载 Image。比较浏览器的 load 次数和组件的 onLoad 次数</p>
-    <button id="run" type="button">运行对照</button>
-    <section id="control"><h2>只读取父容器宽度</h2><div class="mount"></div><p class="result" aria-live="polite"></p></section>
-    <section id="changed"><h2>读宽度后同步更新排版</h2><div class="mount"></div><p class="result" aria-live="polite"></p></section>
+    <p>两组都先预载同一张 PNG，再挂载 Image。点「运行对照」查看实时日志。打开浏览器 Console 还可以展开实际的事件和图片节点</p>
+    <button id="run" type="button" disabled>运行对照</button>
+    <section id="control"><h2>只读取父容器宽度</h2><div class="mount"></div><pre class="result" role="log"></pre></section>
+    <section id="changed"><h2>读宽度后同步更新排版</h2><div class="mount"></div><pre class="result" role="log"></pre></section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
@@ -46,6 +46,17 @@
         h(Arco.Image, {staticLabel: true, src, width: 96, height: 64, alt: '缓存样图', onLoad}), h('span', null, '同一张缓存图'));
     }
 
+    function objectIds() {
+      const ids = new WeakMap();
+      let next = 1;
+      return value => {
+        if (!ids.has(value)) ids.set(value, next++);
+        return ids.get(value);
+      };
+    }
+    const imageId = objectIds();
+    const eventId = objectIds();
+
     async function measure(section, updateLayout) {
       const mount = section.querySelector('.mount');
       const output = section.querySelector('.result');
@@ -57,33 +68,43 @@
         warm.src = src;
       });
       await delay(0);
-      const loads = [], callbacks = [];
-      function show() {
-        const args = callbacks.map(c => c.event === null ? 'null' : c.event.type);
-        const same = callbacks.every(c => c.image === mount.querySelector('img') && c.image.src === src);
-        output.textContent = `原生 load ${loads.length} 次 · 组件 onLoad ${callbacks.length} 次` +
-          (args.length ? `\n回调事件参数：${args.join(' → ')}` : '') +
-          (loads.length && same && callbacks.some(c => c.event === loads[0]) ? '\nload 参数与该图片的原生事件相同' : '');
+      output.textContent = '';
+      let receivedNativeLoad = false;
+      const start = performance.now();
+      function trace(source, event, image) {
+        const elapsed = (performance.now() - start).toFixed(1);
+        let line = `[Image:${section.id}] +${elapsed} ms  ${source}`;
+        if (image) {
+          const value = event === null ? 'null' : `${event.type}#${eventId(event)}`;
+          line += `  event=${value}  node=img#${imageId(image)}`;
+          console.log(line, event, image);
+        } else {
+          console.log(line);
+        }
+        output.append(document.createTextNode(line + '\n'));
       }
       function capture(event) {
-        if (event.target === mount.querySelector('img') && event.isTrusted) { loads.push(event); show(); }
+        if (event.target !== mount.querySelector('img')) return;
+        trace('DOM load', event, event.target);
+        receivedNativeLoad = true;
       }
       mount.addEventListener('load', capture, true);
       try {
+        trace('ReactDOM.render');
         ReactDOM.render(h(Panel, {updateLayout, onLoad(event, image) {
-          callbacks.push({event, image}); show();
+          trace('Image.onLoad', event, image);
         }}), mount);
         const deadline = performance.now() + 4000;
-        while (!loads.length && performance.now() < deadline) await delay(20);
+        while (!receivedNativeLoad && performance.now() < deadline) await delay(20);
         await delay(150);
-        if (!loads.length) throw new Error('未收到图片的原生 load，请重新运行');
-        show();
+        if (!receivedNativeLoad) throw new Error('未收到图片的原生 load，请重新运行');
       } finally {
         mount.removeEventListener('load', capture, true);
       }
     }
 
     const run = document.querySelector('#run');
+    run.disabled = false;
     run.onclick = async () => {
       run.disabled = true;
       try {

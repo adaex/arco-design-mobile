@@ -1,0 +1,7 @@
+[Image:control] +0.1 ms  ReactDOM.render
+[Image:control] +3.2 ms  DOM load  event=load#1  node=img#1
+[Image:control] +3.7 ms  Image.onLoad  event=load#1  node=img#1
+[Image:changed] +0.0 ms  ReactDOM.render
+[Image:changed] +0.6 ms  Image.onLoad  event=null  node=img#2
+[Image:changed] +1.0 ms  DOM load  event=load#2  node=img#2
+[Image:changed] +1.2 ms  Image.onLoad  event=load#2  node=img#2
