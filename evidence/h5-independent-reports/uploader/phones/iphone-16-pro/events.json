@@ -1,0 +1,29 @@
+{
+  "run": "2d9bc035",
+  "device": "iPhone 16 Pro",
+  "system": "iOS 18.5",
+  "browser": "Safari 18.5",
+  "events": [
+    {
+      "source": "DOM touchstart",
+      "ms": 0,
+      "id": -117298226,
+      "trusted": true,
+      "row": "长按验证.txt"
+    },
+    {
+      "source": "DOM touchend",
+      "ms": 1244,
+      "id": -117298226,
+      "trusted": true,
+      "heldMs": 1250,
+      "maxDriftPx": 0
+    },
+    {
+      "source": "读取 onLongPress 次数",
+      "ms": 1846,
+      "afterEndMs": 602,
+      "calls": 0
+    }
+  ]
+}

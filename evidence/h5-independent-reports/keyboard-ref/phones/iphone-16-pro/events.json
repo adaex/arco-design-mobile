@@ -1,0 +1,26 @@
+{
+  "run": "48095267",
+  "device": "iPhone 16 Pro",
+  "system": "iOS 18.5",
+  "browser": "Safari 18.5",
+  "events": [
+    {
+      "source": "挂载 Keyboard",
+      "ms": 0,
+      "visible": true
+    },
+    {
+      "source": "读取页面上的键盘",
+      "ms": 1917,
+      "keys": 12,
+      "width": 402,
+      "height": 261
+    },
+    {
+      "source": "读取组件引用",
+      "ms": 1918,
+      "handle": "present",
+      "keyboard": "null"
+    }
+  ]
+}

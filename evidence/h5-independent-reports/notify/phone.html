@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notify 关闭后的挂载节点</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/style.min.css">
+<style>
+html { font-size: 50px }
+body { margin: 0; color: #20242a; background: white; font: 15px/1.45 system-ui, sans-serif }
+main { max-width: 540px; margin: auto; padding: 12px 14px }
+h1 { font-size: 21px; margin: 0 } p { margin: 5px 0 9px }
+button { font: inherit; padding: 5px 12px }
+#run-id { display: block; font: 13px/1.5 monospace; margin-top: 10px }
+pre { margin: 4px 0; padding: 8px; background: #f3f5f7; font: 13px/1.4 ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere }
+
+</style></head>
+<body><main>
+<h1>Notify 关闭后的挂载节点</h1><p>等通知展开后关闭，两组各在关闭后 500 毫秒读取一次容器</p>
+<button id="action">运行对照</button><div id="control"></div><div id="changed"></div>
+<div id="run-id"></div><pre id="log"></pre>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-transition-group@4.4.2/dist/react-transition-group.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/index.min.js"></script>
+<script>
+const byId = id => document.getElementById(id);
+const h = React.createElement;
+const run = Array.from(crypto.getRandomValues(new Uint8Array(4)), n => n.toString(16).padStart(2, '0')).join('');
+byId('run-id').textContent = 'Run ' + run;
+let start;
+function log(source, fields = {}) {
+  const ms = Number((performance.now() - start).toFixed(1));
+  const args = Object.entries(fields).map(([key, value]) => `${key}=${value}`).join(' ');
+  const line = `+${ms} ms  ${source}` + (args ? `\n  ${args}` : '');
+  console.log(source, {ms, ...fields});
+  byId('log').append(document.createTextNode(line + '\n'));
+}
+function finish() {
+  document.documentElement.dataset.complete = 'true';
+}
+
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+async function test(host, update) {
+  const name = host.id;
+  const handle = Arco.Notify.info({
+    content: '通知', className: 'sample-notice', duration: 0, transitionDuration: 200,
+    getContainer: () => host,
+    onClose: () => log(name + '.original.onClose')
+  });
+  const deadline = performance.now() + 2500;
+  while (true) {
+    const node = host.querySelector('.sample-notice');
+    const target = node && parseFloat(node.style.height);
+    if (target > 0 && Math.abs(node.getBoundingClientRect().height - target) < 1) break;
+    if (performance.now() > deadline) throw new Error(name + ' 通知未完全展开');
+    await wait(20);
+  }
+  if (update) {
+    log(name + '.update(onClose)');
+    handle.update({onClose: () => log(name + '.updated.onClose')});
+  }
+  log(name + '.close()', {children: host.childElementCount});
+  const closedAt = performance.now();
+  handle.close();
+  await wait(500);
+  const child = host.firstElementChild;
+  log(name + '.read', {afterCloseMs: Math.round(performance.now() - closedAt),
+    children: host.childElementCount, first: child ? child.tagName : null});
+}
+byId('action').onclick = async event => {
+  event.currentTarget.disabled = true;
+  start = performance.now();
+  await test(byId('control'), false);
+  await test(byId('changed'), true);
+  finish();
+};
+</script>
+</body></html>

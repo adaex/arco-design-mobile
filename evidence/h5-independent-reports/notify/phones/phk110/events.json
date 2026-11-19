@@ -1,0 +1,44 @@
+{
+  "run": "c65e1ee2",
+  "device": "PHK110",
+  "system": "Android 14",
+  "browser": "Chrome 132.0.6834.165",
+  "events": [
+    {
+      "source": "control.close()",
+      "ms": 222.8,
+      "children": 1
+    },
+    {
+      "source": "control.original.onClose",
+      "ms": 428.4
+    },
+    {
+      "source": "control.read",
+      "ms": 727.2,
+      "afterCloseMs": 502,
+      "children": 0,
+      "first": null
+    },
+    {
+      "source": "changed.update(onClose)",
+      "ms": 943
+    },
+    {
+      "source": "changed.close()",
+      "ms": 944.3,
+      "children": 1
+    },
+    {
+      "source": "changed.updated.onClose",
+      "ms": 1145.5
+    },
+    {
+      "source": "changed.read",
+      "ms": 1445.4,
+      "afterCloseMs": 501,
+      "children": 1,
+      "first": "DIV"
+    }
+  ]
+}

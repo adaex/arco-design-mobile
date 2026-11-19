@@ -1,0 +1,29 @@
+{
+  "run": "413419a0",
+  "device": "iPhone 17",
+  "system": "iOS 26.2",
+  "browser": "Safari 26.2",
+  "events": [
+    {
+      "source": "DOM touchstart",
+      "ms": 0,
+      "id": -1675166056,
+      "trusted": true,
+      "row": "长按验证.txt"
+    },
+    {
+      "source": "DOM touchend",
+      "ms": 1244,
+      "id": -1675166056,
+      "trusted": true,
+      "heldMs": 1250,
+      "maxDriftPx": 0
+    },
+    {
+      "source": "读取 onLongPress 次数",
+      "ms": 1845,
+      "afterEndMs": 601,
+      "calls": 0
+    }
+  ]
+}

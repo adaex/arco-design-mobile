@@ -1,0 +1,12 @@
+Run f5e09e2b
++220 ms  control.close()
+  children=1
++425 ms  control.original.onClose
++723 ms  control.read
+  afterCloseMs=501 children=0 first=null
++936 ms  changed.update(onClose)
++938 ms  changed.close()
+  children=1
++1139 ms  changed.updated.onClose
++1439 ms  changed.read
+  afterCloseMs=501 children=1 first=DIV

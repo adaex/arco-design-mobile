@@ -1,0 +1,26 @@
+{
+  "run": "7df00d4a",
+  "device": "iPhone 17",
+  "system": "iOS 26.2",
+  "browser": "Safari 26.2",
+  "events": [
+    {
+      "source": "挂载 Keyboard",
+      "ms": 0,
+      "visible": true
+    },
+    {
+      "source": "读取页面上的键盘",
+      "ms": 1468,
+      "keys": 12,
+      "width": 402,
+      "height": 261
+    },
+    {
+      "source": "读取组件引用",
+      "ms": 1468,
+      "handle": "present",
+      "keyboard": "null"
+    }
+  ]
+}

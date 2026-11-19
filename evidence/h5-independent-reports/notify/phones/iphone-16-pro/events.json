@@ -1,0 +1,44 @@
+{
+  "run": "f5e09e2b",
+  "device": "iPhone 16 Pro",
+  "system": "iOS 18.5",
+  "browser": "Safari 18.5",
+  "events": [
+    {
+      "source": "control.close()",
+      "ms": 220,
+      "children": 1
+    },
+    {
+      "source": "control.original.onClose",
+      "ms": 425
+    },
+    {
+      "source": "control.read",
+      "ms": 723,
+      "afterCloseMs": 501,
+      "children": 0,
+      "first": null
+    },
+    {
+      "source": "changed.update(onClose)",
+      "ms": 936
+    },
+    {
+      "source": "changed.close()",
+      "ms": 938,
+      "children": 1
+    },
+    {
+      "source": "changed.updated.onClose",
+      "ms": 1139
+    },
+    {
+      "source": "changed.read",
+      "ms": 1439,
+      "afterCloseMs": 501,
+      "children": 1,
+      "first": "DIV"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Uploader 文件长按</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/style.min.css">
+<style>
+html { font-size: 50px }
+body { margin: 0; color: #20242a; background: white; font: 15px/1.45 system-ui, sans-serif }
+main { max-width: 540px; margin: auto; padding: 12px 14px }
+h1 { font-size: 21px; margin: 0 } p { margin: 5px 0 9px }
+button { font: inherit; padding: 5px 12px }
+#run-id { display: block; font: 13px/1.5 monospace; margin-top: 10px }
+pre { margin: 4px 0; padding: 8px; background: #f3f5f7; font: 13px/1.4 ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere }
+.arco-uploader-list-item { min-height: 50px; display: flex; align-items: center; border: 1px solid #9dabbb; padding: 0 8px; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none } .arco-uploader-list-item-container { flex: 1 }
+</style></head>
+<body><main>
+<h1>Uploader 文件长按</h1><p>按住文件行中央约 1.2 秒再松手，避开右侧删除按钮</p>
+<div id="uploader"></div>
+<div id="run-id"></div><pre id="log"></pre>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-transition-group@4.4.2/dist/react-transition-group.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/index.min.js"></script>
+<script>
+const byId = id => document.getElementById(id);
+const h = React.createElement;
+const run = Array.from(crypto.getRandomValues(new Uint8Array(4)), n => n.toString(16).padStart(2, '0')).join('');
+byId('run-id').textContent = 'Run ' + run;
+let start;
+function log(source, fields = {}) {
+  const ms = Number((performance.now() - start).toFixed(1));
+  const args = Object.entries(fields).map(([key, value]) => `${key}=${value}`).join(' ');
+  const line = `+${ms} ms  ${source}` + (args ? `\n  ${args}` : '');
+  console.log(source, {ms, ...fields});
+  byId('log').append(document.createTextNode(line + '\n'));
+}
+function finish() {
+  document.documentElement.dataset.complete = 'true';
+}
+
+const host = byId('uploader');
+const file = new File(['H5'], '长按验证.txt', {type: 'text/plain'});
+let gesture, calls = 0;
+ReactDOM.render(h(Arco.Uploader, {
+  files: [{file, status: 'loaded'}], limit: 1, hideStatus: true,
+  onLongPress(event, item, index) {
+    calls++;
+    log('Uploader.onLongPress', {call: calls, file: item.file.name, index});
+  }
+}), host);
+function observe(event) {
+  if (!event.isTrusted || document.documentElement.dataset.complete) return;
+  if (event.type === 'touchstart') {
+    if (gesture || event.touches.length !== 1 || !event.target.closest('.arco-uploader-list-item') ||
+        event.target.closest('.arco-uploader-list-item-delete')) return;
+    const point = event.changedTouches[0];
+    start = performance.now();
+    gesture = {id: point.identifier, x: point.clientX, y: point.clientY, time: event.timeStamp, drift: 0};
+    log('DOM touchstart', {id: point.identifier, trusted: event.isTrusted, row: file.name});
+    return;
+  }
+  if (!gesture || gesture.ended) return;
+  const point = Array.from(event.changedTouches).find(t => t.identifier === gesture.id);
+  if (!point) return;
+  gesture.drift = Math.max(gesture.drift, Math.hypot(point.clientX - gesture.x, point.clientY - gesture.y));
+  if (event.type === 'touchmove') return;
+  gesture.ended = true;
+  log('DOM ' + event.type, {id: point.identifier, trusted: event.isTrusted,
+    heldMs: Math.round(event.timeStamp - gesture.time), maxDriftPx: Number(gesture.drift.toFixed(1))});
+  const end = performance.now();
+  setTimeout(() => {
+    log('读取 onLongPress 次数', {afterEndMs: Math.round(performance.now() - end), calls});
+    finish();
+  }, 600);
+}
+for (const type of ['touchstart', 'touchmove', 'touchend', 'touchcancel']) {
+  host.addEventListener(type, observe, {capture: true, passive: true});
+}
+</script>
+</body></html>

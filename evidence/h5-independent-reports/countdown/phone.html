@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>两个一秒 CountDown</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/style.min.css">
+<style>
+html { font-size: 50px }
+body { margin: 0; color: #20242a; background: white; font: 15px/1.45 system-ui, sans-serif }
+main { max-width: 540px; margin: auto; padding: 12px 14px }
+h1 { font-size: 21px; margin: 0 } p { margin: 5px 0 9px }
+button { font: inherit; padding: 5px 12px }
+#run-id { display: block; font: 13px/1.5 monospace; margin-top: 10px }
+pre { margin: 4px 0; padding: 8px; background: #f3f5f7; font: 13px/1.4 ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere }
+#timers { display: flex; gap: 24px; margin-top: 8px }
+</style></head>
+<body><main>
+<h1>两个一秒 CountDown</h1><p>同时启动 A、B，保持页面在前台</p>
+<button id="action">同时启动 A 和 B</button><div id="timers"></div>
+<div id="run-id"></div><pre id="log"></pre>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-transition-group@4.4.2/dist/react-transition-group.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/index.min.js"></script>
+<script>
+const byId = id => document.getElementById(id);
+const h = React.createElement;
+const run = Array.from(crypto.getRandomValues(new Uint8Array(4)), n => n.toString(16).padStart(2, '0')).join('');
+byId('run-id').textContent = 'Run ' + run;
+let start;
+function log(source, fields = {}) {
+  const ms = Number((performance.now() - start).toFixed(1));
+  const args = Object.entries(fields).map(([key, value]) => `${key}=${value}`).join(' ');
+  const line = `+${ms} ms  ${source}` + (args ? `\n  ${args}` : '');
+  console.log(source, {ms, ...fields});
+  byId('log').append(document.createTextNode(line + '\n'));
+}
+function finish() {
+  document.documentElement.dataset.complete = 'true';
+}
+
+function Pair() {
+  const a = React.useRef(null), b = React.useRef(null);
+  const counts = React.useRef({A: 0, B: 0}).current;
+  React.useEffect(() => {
+    start = performance.now();
+    log('A.start()');
+    a.current.start();
+    log('B.start()');
+    b.current.start();
+    setTimeout(() => {
+      log('读取回调次数', {A: counts.A, B: counts.B});
+      finish();
+    }, 2600);
+  }, []);
+  function timer(label, ref) {
+    return h('span', null, label + ' ', h('span', {id: 'value' + label}, h(Arco.CountDown, {
+      time: 1000, format: 's', autoStart: false, ref,
+      onFinish() {
+        counts[label]++;
+        log(label + '.onFinish', {call: counts[label]});
+        if (label === 'A') requestAnimationFrame(() => log('A 回调后的下一帧', {
+          A: byId('valueA').textContent.trim(), B: byId('valueB').textContent.trim()
+        }));
+      }
+    })));
+  }
+  return h(React.Fragment, null, timer('A', a), timer('B', b));
+}
+byId('action').onclick = event => {
+  event.currentTarget.disabled = true;
+  ReactDOM.render(h(Pair), byId('timers'));
+};
+</script>
+</body></html>

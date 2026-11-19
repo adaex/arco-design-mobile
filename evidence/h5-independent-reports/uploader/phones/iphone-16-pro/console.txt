@@ -1,0 +1,7 @@
+Run 2d9bc035
++0 ms  DOM touchstart
+  id=-117298226 trusted=true row=长按验证.txt
++1244 ms  DOM touchend
+  id=-117298226 trusted=true heldMs=1250 maxDriftPx=0
++1846 ms  读取 onLongPress 次数
+  afterEndMs=602 calls=0

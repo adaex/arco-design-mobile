@@ -1,0 +1,29 @@
+{
+  "run": "f1c752a8",
+  "device": "vivo V2415A",
+  "system": "Android 15",
+  "browser": "vivo 浏览器 21.6.11.3",
+  "events": [
+    {
+      "source": "DOM touchstart",
+      "ms": 0.1,
+      "id": 0,
+      "trusted": true,
+      "row": "长按验证.txt"
+    },
+    {
+      "source": "DOM touchend",
+      "ms": 1259.6,
+      "id": 0,
+      "trusted": true,
+      "heldMs": 1259,
+      "maxDriftPx": 0
+    },
+    {
+      "source": "读取 onLongPress 次数",
+      "ms": 1861,
+      "afterEndMs": 601,
+      "calls": 0
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Run 48095267
++0 ms  挂载 Keyboard
+  visible=true
++1917 ms  读取页面上的键盘
+  keys=12 width=402 height=261
++1918 ms  读取组件引用
+  handle=present keyboard=null

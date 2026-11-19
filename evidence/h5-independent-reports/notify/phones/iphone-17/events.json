@@ -1,0 +1,44 @@
+{
+  "run": "9c2c93bf",
+  "device": "iPhone 17",
+  "system": "iOS 26.2",
+  "browser": "Safari 26.2",
+  "events": [
+    {
+      "source": "control.close()",
+      "ms": 218,
+      "children": 1
+    },
+    {
+      "source": "control.original.onClose",
+      "ms": 425
+    },
+    {
+      "source": "control.read",
+      "ms": 720,
+      "afterCloseMs": 502,
+      "children": 0,
+      "first": null
+    },
+    {
+      "source": "changed.update(onClose)",
+      "ms": 929
+    },
+    {
+      "source": "changed.close()",
+      "ms": 930,
+      "children": 1
+    },
+    {
+      "source": "changed.updated.onClose",
+      "ms": 1132
+    },
+    {
+      "source": "changed.read",
+      "ms": 1431,
+      "afterCloseMs": 501,
+      "children": 1,
+      "first": "DIV"
+    }
+  ]
+}

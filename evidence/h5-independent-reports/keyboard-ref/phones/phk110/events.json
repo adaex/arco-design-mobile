@@ -1,0 +1,26 @@
+{
+  "run": "4ffb3738",
+  "device": "PHK110",
+  "system": "Android 14",
+  "browser": "Chrome 132.0.6834.165",
+  "events": [
+    {
+      "source": "挂载 Keyboard",
+      "ms": 0.3,
+      "visible": true
+    },
+    {
+      "source": "读取页面上的键盘",
+      "ms": 1561.7,
+      "keys": 12,
+      "width": 355,
+      "height": 261
+    },
+    {
+      "source": "读取组件引用",
+      "ms": 1561.9,
+      "handle": "present",
+      "keyboard": "null"
+    }
+  ]
+}
