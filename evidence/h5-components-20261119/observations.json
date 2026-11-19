@@ -1,0 +1,384 @@
+{
+  "notify": [
+    {
+      "device": "NE2210 · Android 13",
+      "status": "reproduced",
+      "observations": [
+        "原回调对照：已展开，关闭当下挂载节点 1 个，505 ms 后剩 0 个、通知 0 个；原回调 1 次，新回调 0 次",
+        "更新 onClose：已展开，关闭当下挂载节点 1 个，502 ms 后剩 1 个、通知 1 个；原回调 0 次，新回调 1 次"
+      ],
+      "browser": "HeyTap 40.10.14.1"
+    },
+    {
+      "device": "PHK110 · Android 14",
+      "status": "reproduced",
+      "observations": [
+        "原回调对照：已展开，关闭当下挂载节点 1 个，502 ms 后剩 0 个、通知 0 个；原回调 1 次，新回调 0 次",
+        "更新 onClose：已展开，关闭当下挂载节点 1 个，501 ms 后剩 1 个、通知 1 个；原回调 0 次，新回调 1 次"
+      ],
+      "browser": "Chrome 132"
+    },
+    {
+      "device": "iPhone 16 Pro · iOS 18.5",
+      "status": "reproduced",
+      "observations": [
+        "原回调对照：已展开，关闭当下挂载节点 1 个，502 ms 后剩 0 个、通知 0 个；原回调 1 次，新回调 0 次",
+        "更新 onClose：已展开，关闭当下挂载节点 1 个，501 ms 后剩 1 个、通知 1 个；原回调 0 次，新回调 1 次"
+      ],
+      "browser": "Safari 18.5"
+    },
+    {
+      "device": "iPhone 17 · iOS 26.5",
+      "status": "reproduced",
+      "observations": [
+        "原回调对照：已展开，关闭当下挂载节点 1 个，502 ms 后剩 0 个、通知 0 个；原回调 1 次，新回调 0 次",
+        "更新 onClose：已展开，关闭当下挂载节点 1 个，500 ms 后剩 1 个、通知 1 个；原回调 0 次，新回调 1 次"
+      ],
+      "browser": "Safari 26.5"
+    }
+  ],
+  "countdown": [
+    {
+      "device": "NE2210 · Android 13",
+      "status": "reproduced",
+      "observations": [
+        "两个 1000 ms 倒计时，onFinish 到时：A 1010 ms、B 2017 ms",
+        "首个结束任务返回后 [1, 0]（启动后 1011 ms），紧接的绘制帧 [1, 0]（启动后 1017 ms）",
+        "最终 [1, 1]（启动后 3293 ms）；已确认同批到期，页面持续可见"
+      ],
+      "browser": "HeyTap 40.10.14.1"
+    },
+    {
+      "device": "PHK110 · Android 14",
+      "status": "reproduced",
+      "observations": [
+        "两个 1000 ms 倒计时，onFinish 到时：A 1005 ms、B 2008 ms",
+        "首个结束任务返回后 [1, 0]（启动后 1005 ms），紧接的绘制帧 [1, 0]（启动后 1008 ms）",
+        "最终 [1, 1]（启动后 3292 ms）；已确认同批到期，页面持续可见"
+      ],
+      "browser": "Chrome 132"
+    },
+    {
+      "device": "iPhone 16 Pro · iOS 18.5",
+      "status": "reproduced",
+      "observations": [
+        "两个 1000 ms 倒计时，onFinish 到时：A 1004 ms、B 2009 ms",
+        "首个结束任务返回后 [1, 0]（启动后 1004 ms），紧接的绘制帧 [1, 0]（启动后 1005 ms）",
+        "最终 [1, 1]（启动后 3299 ms）；已确认同批到期，页面持续可见"
+      ],
+      "browser": "Safari 18.5"
+    },
+    {
+      "device": "iPhone 17 · iOS 26.5",
+      "status": "reproduced",
+      "observations": [
+        "两个 1000 ms 倒计时，onFinish 到时：A 1002 ms、B 2003 ms",
+        "首个结束任务返回后 [1, 0]（启动后 1002 ms），紧接的绘制帧 [1, 0]（启动后 1002 ms）",
+        "最终 [1, 1]（启动后 3290 ms）；已确认同批到期，页面持续可见"
+      ],
+      "browser": "Safari 26.5"
+    }
+  ],
+  "keyboard": [
+    {
+      "device": "NE2210 · Android 13",
+      "status": "reproduced",
+      "observations": [
+        "首次 visible，键盘尺寸 480 × 74 px，按钮 12 个",
+        "ref.current.keyboard：null"
+      ],
+      "browser": "HeyTap 40.10.14.1"
+    },
+    {
+      "device": "PHK110 · Android 14",
+      "status": "reproduced",
+      "observations": [
+        "首次 visible，键盘尺寸 355 × 74 px，按钮 12 个",
+        "ref.current.keyboard：null"
+      ],
+      "browser": "Chrome 132"
+    },
+    {
+      "device": "iPhone 16 Pro · iOS 18.5",
+      "status": "reproduced",
+      "observations": [
+        "首次 visible，键盘尺寸 402 × 74 px，按钮 12 个",
+        "ref.current.keyboard：null"
+      ],
+      "browser": "Safari 18.5"
+    },
+    {
+      "device": "iPhone 17 · iOS 26.5",
+      "status": "reproduced",
+      "observations": [
+        "首次 visible，键盘尺寸 402 × 74 px，按钮 12 个",
+        "ref.current.keyboard：null"
+      ],
+      "browser": "Safari 26.5"
+    }
+  ],
+  "order": [
+    {
+      "device": "NE2210 · Android 13",
+      "status": "reproduced",
+      "observations": [
+        "乱序前普通键盘：1234567890",
+        "第 1 次乱序键盘：3421958076",
+        "新挂载的普通键盘：3421958076"
+      ],
+      "browser": "HeyTap 40.10.14.1"
+    },
+    {
+      "device": "PHK110 · Android 14",
+      "status": "reproduced",
+      "observations": [
+        "乱序前普通键盘：1234567890",
+        "第 1 次乱序键盘：1706243985",
+        "新挂载的普通键盘：1706243985"
+      ],
+      "browser": "Chrome 132"
+    },
+    {
+      "device": "iPhone 16 Pro · iOS 18.5",
+      "status": "reproduced",
+      "observations": [
+        "乱序前普通键盘：1234567890",
+        "第 1 次乱序键盘：1546239708",
+        "新挂载的普通键盘：1546239708"
+      ],
+      "browser": "Safari 18.5"
+    },
+    {
+      "device": "iPhone 17 · iOS 26.5",
+      "status": "reproduced",
+      "observations": [
+        "乱序前普通键盘：1234567890",
+        "第 1 次乱序键盘：4279158630",
+        "新挂载的普通键盘：4279158630"
+      ],
+      "browser": "Safari 26.5"
+    }
+  ],
+  "form": [
+    {
+      "device": "NE2210 · Android 13",
+      "status": "normal",
+      "observations": [
+        "Form 提交 [1]，要求与 [2] 完全相等：onSubmitFailed，提示「items 应该完全等于 [2]」",
+        "Form 提交 [2]，要求与 [2] 完全相等：onSubmit",
+        "独立调用 getMsgTemplate：缺一级键 notExist 返回「items is not a number type」；缺二级键 array.equal 抛出 TypeError"
+      ],
+      "browser": "HeyTap 40.10.14.1"
+    },
+    {
+      "device": "PHK110 · Android 14",
+      "status": "normal",
+      "observations": [
+        "Form 提交 [1]，要求与 [2] 完全相等：onSubmitFailed，提示「items 应该完全等于 [2]」",
+        "Form 提交 [2]，要求与 [2] 完全相等：onSubmit",
+        "独立调用 getMsgTemplate：缺一级键 notExist 返回「items is not a number type」；缺二级键 array.equal 抛出 TypeError"
+      ],
+      "browser": "Chrome 132"
+    },
+    {
+      "device": "iPhone 16 Pro · iOS 18.5",
+      "status": "normal",
+      "observations": [
+        "Form 提交 [1]，要求与 [2] 完全相等：onSubmitFailed，提示「items 应该完全等于 [2]」",
+        "Form 提交 [2]，要求与 [2] 完全相等：onSubmit",
+        "独立调用 getMsgTemplate：缺一级键 notExist 返回「items is not a number type」；缺二级键 array.equal 抛出 TypeError"
+      ],
+      "browser": "Safari 18.5"
+    },
+    {
+      "device": "iPhone 17 · iOS 26.5",
+      "status": "normal",
+      "observations": [
+        "Form 提交 [1]，要求与 [2] 完全相等：onSubmitFailed，提示「items 应该完全等于 [2]」",
+        "Form 提交 [2]，要求与 [2] 完全相等：onSubmit",
+        "独立调用 getMsgTemplate：缺一级键 notExist 返回「items is not a number type」；缺二级键 array.equal 抛出 TypeError"
+      ],
+      "browser": "Safari 26.5"
+    }
+  ],
+  "tabs": [
+    {
+      "device": "NE2210 · Android 13",
+      "status": "normal",
+      "observations": [
+        "原生触摸：开始 1，移动 5，结束 1，取消 0；touchend",
+        "手指纵移 -132 px，原生 scroll 54 次，scrollTop 从 0 到 159 px",
+        "公开 onScroll 54 次，onChange 0 次"
+      ],
+      "browser": "HeyTap 40.10.14.1"
+    },
+    {
+      "device": "PHK110 · Android 14",
+      "status": "normal",
+      "observations": [
+        "原生触摸：开始 1，移动 4，结束 1，取消 0；touchend",
+        "手指纵移 -132 px，原生 scroll 50 次，scrollTop 从 0 到 155 px",
+        "公开 onScroll 50 次，onChange 0 次"
+      ],
+      "browser": "Chrome 132"
+    },
+    {
+      "device": "iPhone 16 Pro · iOS 18.5",
+      "status": "normal",
+      "observations": [
+        "原生触摸：开始 1，移动 39，结束 1，取消 0；touchend",
+        "手指纵移 -130 px，原生 scroll 19 次，scrollTop 从 0 到 114 px",
+        "公开 onScroll 19 次，onChange 0 次"
+      ],
+      "browser": "Safari 18.5"
+    },
+    {
+      "device": "iPhone 17 · iOS 26.5",
+      "status": "normal",
+      "observations": [
+        "原生触摸：开始 1，移动 37，结束 1，取消 0；touchend",
+        "手指纵移 -130 px，原生 scroll 17 次，scrollTop 从 0 到 111 px",
+        "公开 onScroll 17 次，onChange 0 次"
+      ],
+      "browser": "Safari 26.5"
+    }
+  ],
+  "upload": [
+    {
+      "device": "Pixel 9 · Android 14",
+      "status": "reproduced",
+      "observations": [
+        "原生触摸：开始 1，移动 0，结束 1，取消 0；touchend",
+        "按住 1251 ms，最大偏移 0 px",
+        "原生 contextmenu 1 次，click 0 次，公开 onClick 0 次",
+        "公开 onLongPress 0 次，文件与下标 0 匹配 0 次"
+      ],
+      "browser": "Chrome 157"
+    },
+    {
+      "device": "PHK110 · Android 14",
+      "status": "reproduced",
+      "observations": [
+        "原生触摸：开始 1，移动 0，结束 1，取消 0；touchend",
+        "按住 1252 ms，最大偏移 0 px",
+        "原生 contextmenu 1 次，click 0 次，公开 onClick 0 次",
+        "公开 onLongPress 0 次，文件与下标 0 匹配 0 次"
+      ],
+      "browser": "Chrome 132"
+    },
+    {
+      "device": "iPhone 16 Pro · iOS 18.5",
+      "status": "reproduced",
+      "observations": [
+        "原生触摸：开始 1，移动 0，结束 1，取消 0；touchend",
+        "按住 1250 ms，最大偏移 0 px",
+        "原生 contextmenu 0 次，click 1 次，公开 onClick 1 次",
+        "公开 onLongPress 0 次，文件与下标 0 匹配 0 次"
+      ],
+      "browser": "Safari 18.5"
+    },
+    {
+      "device": "iPhone 17 · iOS 26.5",
+      "status": "reproduced",
+      "observations": [
+        "原生触摸：开始 1，移动 0，结束 1，取消 0；touchend",
+        "按住 1250 ms，最大偏移 0 px",
+        "原生 contextmenu 0 次，click 1 次，公开 onClick 1 次",
+        "公开 onLongPress 0 次，文件与下标 0 匹配 0 次"
+      ],
+      "browser": "Safari 26.5"
+    },
+    {
+      "device": "NE2210 · Android 13",
+      "browser": "HeyTap 40.10.14.1",
+      "status": "inconclusive",
+      "observations": [
+        "原生 contextmenu 之后收到 touchcancel，未收到 touchend，本次不计为完整长按。"
+      ]
+    }
+  ],
+  "image": [
+    {
+      "device": "NE2210 · Android 13",
+      "status": "normal",
+      "observations": [
+        "预载成功，挂载时 complete=true，自然宽度 48 px",
+        "组件图片收到原生 load 1 次，onLoad 1 次（load 228 ms）",
+        "最终自然宽度 48 px，错误 0 次（494.2 ms）"
+      ],
+      "browser": "HeyTap 40.10.14.1"
+    },
+    {
+      "device": "PHK110 · Android 14",
+      "status": "normal",
+      "observations": [
+        "预载成功，挂载时 complete=true，自然宽度 48 px",
+        "组件图片收到原生 load 1 次，onLoad 1 次（load 688.5 ms）",
+        "最终自然宽度 48 px，错误 0 次（952 ms）"
+      ],
+      "browser": "Chrome 132"
+    },
+    {
+      "device": "iPhone 16 Pro · iOS 18.5",
+      "status": "normal",
+      "observations": [
+        "预载成功，挂载时 complete=true，自然宽度 48 px",
+        "组件图片收到原生 load 1 次，onLoad 1 次（load 69 ms）",
+        "最终自然宽度 48 px，错误 0 次（340 ms）"
+      ],
+      "browser": "Safari 18.5"
+    },
+    {
+      "device": "iPhone 17 · iOS 26.5",
+      "status": "normal",
+      "observations": [
+        "预载成功，挂载时 complete=true，自然宽度 48 px",
+        "组件图片收到原生 load 1 次，onLoad 1 次（load 411 ms）",
+        "最终自然宽度 48 px，错误 0 次（681 ms）"
+      ],
+      "browser": "Safari 26.5"
+    }
+  ],
+  "layoutimage": [
+    {
+      "device": "NE2210 · Android 13",
+      "status": "reproduced",
+      "observations": [
+        "只读取容器宽度：实测宽 468.0 px，挂载时 complete=true；原生 load 1 次，onLoad 1 次（load 180.7 ms）",
+        "读宽度并更新父布局：实测宽 468.0 px，挂载时 complete=true；原生 load 1 次，onLoad 2 次（挂载补发 12.7 ms、load 19.2 ms）",
+        "父组件 useEffect：对照在 render 返回后，更新组在 返回前；父布局已同步更新"
+      ],
+      "browser": "HeyTap 40.10.14.1"
+    },
+    {
+      "device": "PHK110 · Android 14",
+      "status": "reproduced",
+      "observations": [
+        "只读取容器宽度：实测宽 343.1 px，挂载时 complete=true；原生 load 1 次，onLoad 1 次（load 304.9 ms）",
+        "读宽度并更新父布局：实测宽 343.1 px，挂载时 complete=true；原生 load 1 次，onLoad 2 次（挂载补发 7.8 ms、load 12.3 ms）",
+        "父组件 useEffect：对照在 render 返回后，更新组在 返回前；父布局已同步更新"
+      ],
+      "browser": "Chrome 132"
+    },
+    {
+      "device": "iPhone 16 Pro · iOS 18.5",
+      "status": "reproduced",
+      "observations": [
+        "只读取容器宽度：实测宽 390.0 px，挂载时 complete=true；原生 load 1 次，onLoad 1 次（load 83 ms）",
+        "读宽度并更新父布局：实测宽 390.0 px，挂载时 complete=true；原生 load 1 次，onLoad 2 次（挂载补发 2 ms、load 4 ms）",
+        "父组件 useEffect：对照在 render 返回后，更新组在 返回前；父布局已同步更新"
+      ],
+      "browser": "Safari 18.5"
+    },
+    {
+      "device": "iPhone 17 · iOS 26.5",
+      "status": "reproduced",
+      "observations": [
+        "只读取容器宽度：实测宽 390.0 px，挂载时 complete=true；原生 load 1 次，onLoad 1 次（load 621 ms）",
+        "读宽度并更新父布局：实测宽 390.0 px，挂载时 complete=true；原生 load 1 次，onLoad 2 次（挂载补发 2 ms、load 4 ms）",
+        "父组件 useEffect：对照在 render 返回后，更新组在 返回前；父布局已同步更新"
+      ],
+      "browser": "Safari 26.5"
+    }
+  ]
+}
