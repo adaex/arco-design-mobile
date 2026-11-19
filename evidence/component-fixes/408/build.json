@@ -1,0 +1,12 @@
+{
+  "case": "notify",
+  "issue": 408,
+  "commit": "9963b633244799740b6bd920bfdc2d1393fdd84a",
+  "base": "53875e1780e9a53a8c86dd959803e980ebb2c715",
+  "bundleSha256": "fe891a9807bd29bf564dadfed27be153b5ec5bd8aa99877e76c5bb8e9dc168e8",
+  "entry": "packages/arcodesign/components/notify/index.tsx",
+  "productFiles": [
+    "packages/arcodesign/components/notify/methods.tsx"
+  ],
+  "esbuild": "0.15.18"
+}

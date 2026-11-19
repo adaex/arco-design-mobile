@@ -1,0 +1,12 @@
+Run 8cfa93cc
+commit 4460da391c37d54c85672cf7393b35cd39e9a6a6
++0 ms  A.start()
++0.2 ms  B.start()
++1006.2 ms  A.onFinish
+  call=1
++1011 ms  B.onFinish
+  call=1
++1024 ms  A 回调后的下一帧
+  A=0 B=0
++2601.3 ms  读取回调次数
+  A=1 B=1

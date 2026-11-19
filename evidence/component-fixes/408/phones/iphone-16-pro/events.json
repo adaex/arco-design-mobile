@@ -1,0 +1,45 @@
+{
+  "device": "iPhone 16 Pro",
+  "system": "iOS 18.4.1",
+  "browser": "Safari 18.4",
+  "commit": "9963b633244799740b6bd920bfdc2d1393fdd84a",
+  "run": "4ddd090c",
+  "events": [
+    {
+      "source": "control.close()",
+      "ms": 219,
+      "children": 1
+    },
+    {
+      "source": "control.original.onClose",
+      "ms": 424
+    },
+    {
+      "source": "control.read",
+      "ms": 722,
+      "afterCloseMs": 502,
+      "children": 0,
+      "first": null
+    },
+    {
+      "source": "changed.update(onClose)",
+      "ms": 933
+    },
+    {
+      "source": "changed.close()",
+      "ms": 935,
+      "children": 1
+    },
+    {
+      "source": "changed.updated.onClose",
+      "ms": 1136
+    },
+    {
+      "source": "changed.read",
+      "ms": 1436,
+      "afterCloseMs": 501,
+      "children": 0,
+      "first": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Run 4ddd090c
+commit 9963b633244799740b6bd920bfdc2d1393fdd84a
++219 ms  control.close()
+  children=1
++424 ms  control.original.onClose
++722 ms  control.read
+  afterCloseMs=502 children=0 first=null
++933 ms  changed.update(onClose)
++935 ms  changed.close()
+  children=1
++1136 ms  changed.updated.onClose
++1436 ms  changed.read
+  afterCloseMs=501 children=0 first=null

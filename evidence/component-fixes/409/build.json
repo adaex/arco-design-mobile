@@ -1,0 +1,12 @@
+{
+  "case": "countdown",
+  "issue": 409,
+  "commit": "4460da391c37d54c85672cf7393b35cd39e9a6a6",
+  "base": "53875e1780e9a53a8c86dd959803e980ebb2c715",
+  "bundleSha256": "634e81574db5bf7af198547d58c99c25d4e353bbbda5c7042200ab722bd223c4",
+  "entry": "packages/arcodesign/components/count-down/index.tsx",
+  "productFiles": [
+    "packages/arcodesign/components/count-down/singleton.ts"
+  ],
+  "esbuild": "0.15.18"
+}

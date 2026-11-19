@@ -1,0 +1,57 @@
+{
+  "device": "iPhone 16 Pro",
+  "system": "iOS 18.4.1",
+  "browser": "Safari 18.4",
+  "commit": "87b3bacf294c5d594a8a5b7bb0ba9588cea6fdd7",
+  "run": "d29b617a",
+  "events": [
+    {
+      "group": "control",
+      "line": "+0.0 ms  ReactDOM.render",
+      "type": null,
+      "trusted": null,
+      "node": null,
+      "matchesMounted": null
+    },
+    {
+      "group": "control",
+      "line": "+11.0 ms  DOM load\n  event=load#1  node=img#1  trusted=true",
+      "type": "load",
+      "trusted": true,
+      "node": "IMG",
+      "matchesMounted": true
+    },
+    {
+      "group": "control",
+      "line": "+13.0 ms  Image.onLoad\n  event=load#1  node=img#1  trusted=true",
+      "type": "load",
+      "trusted": true,
+      "node": "IMG",
+      "matchesMounted": true
+    },
+    {
+      "group": "changed",
+      "line": "+0.0 ms  ReactDOM.render",
+      "type": null,
+      "trusted": null,
+      "node": null,
+      "matchesMounted": null
+    },
+    {
+      "group": "changed",
+      "line": "+3.0 ms  Image.onLoad\n  event=null  node=img#2",
+      "type": null,
+      "trusted": null,
+      "node": "IMG",
+      "matchesMounted": true
+    },
+    {
+      "group": "changed",
+      "line": "+6.0 ms  DOM load\n  event=load#2  node=img#2  trusted=true",
+      "type": "load",
+      "trusted": true,
+      "node": "IMG",
+      "matchesMounted": true
+    }
+  ]
+}

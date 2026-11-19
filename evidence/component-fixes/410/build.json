@@ -1,0 +1,12 @@
+{
+  "case": "image",
+  "issue": 410,
+  "commit": "87b3bacf294c5d594a8a5b7bb0ba9588cea6fdd7",
+  "base": "53875e1780e9a53a8c86dd959803e980ebb2c715",
+  "bundleSha256": "cd0cf315b34fd227f40fb20528d407b9d1a7b9ddf73dcb80babf1e063c1b70df",
+  "entry": "packages/arcodesign/components/image/index.tsx",
+  "productFiles": [
+    "packages/arcodesign/components/image/index.tsx"
+  ],
+  "esbuild": "0.15.18"
+}

@@ -1,0 +1,39 @@
+{
+  "device": "vivo V2458A",
+  "system": "Android 15",
+  "browser": "vivo 浏览器 23.6.10.2",
+  "commit": "4460da391c37d54c85672cf7393b35cd39e9a6a6",
+  "run": "8cfa93cc",
+  "events": [
+    {
+      "source": "A.start()",
+      "ms": 0
+    },
+    {
+      "source": "B.start()",
+      "ms": 0.2
+    },
+    {
+      "source": "A.onFinish",
+      "ms": 1006.2,
+      "call": 1
+    },
+    {
+      "source": "B.onFinish",
+      "ms": 1011,
+      "call": 1
+    },
+    {
+      "source": "A 回调后的下一帧",
+      "ms": 1024,
+      "A": "0",
+      "B": "0"
+    },
+    {
+      "source": "读取回调次数",
+      "ms": 2601.3,
+      "A": 1,
+      "B": 1
+    }
+  ]
+}

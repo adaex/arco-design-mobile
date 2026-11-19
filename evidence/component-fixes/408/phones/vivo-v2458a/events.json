@@ -1,0 +1,45 @@
+{
+  "device": "vivo V2458A",
+  "system": "Android 15",
+  "browser": "vivo 浏览器 23.6.10.2",
+  "commit": "9963b633244799740b6bd920bfdc2d1393fdd84a",
+  "run": "fc4ad072",
+  "events": [
+    {
+      "source": "control.close()",
+      "ms": 212.2,
+      "children": 1
+    },
+    {
+      "source": "control.original.onClose",
+      "ms": 413.5
+    },
+    {
+      "source": "control.read",
+      "ms": 714.2,
+      "afterCloseMs": 502,
+      "children": 0,
+      "first": null
+    },
+    {
+      "source": "changed.update(onClose)",
+      "ms": 925.1
+    },
+    {
+      "source": "changed.close()",
+      "ms": 928.3,
+      "children": 1
+    },
+    {
+      "source": "changed.updated.onClose",
+      "ms": 1132.6
+    },
+    {
+      "source": "changed.read",
+      "ms": 1430.6,
+      "afterCloseMs": 502,
+      "children": 0,
+      "first": null
+    }
+  ]
+}

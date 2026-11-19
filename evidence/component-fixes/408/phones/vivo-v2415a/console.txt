@@ -1,0 +1,13 @@
+Run a80ffe52
+commit 9963b633244799740b6bd920bfdc2d1393fdd84a
++214.7 ms  control.close()
+  children=1
++415.8 ms  control.original.onClose
++716.1 ms  control.read
+  afterCloseMs=501 children=0 first=null
++935.2 ms  changed.update(onClose)
++936.7 ms  changed.close()
+  children=1
++1139.1 ms  changed.updated.onClose
++1438.6 ms  changed.read
+  afterCloseMs=502 children=0 first=null

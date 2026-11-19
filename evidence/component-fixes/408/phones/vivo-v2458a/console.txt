@@ -1,0 +1,13 @@
+Run fc4ad072
+commit 9963b633244799740b6bd920bfdc2d1393fdd84a
++212.2 ms  control.close()
+  children=1
++413.5 ms  control.original.onClose
++714.2 ms  control.read
+  afterCloseMs=502 children=0 first=null
++925.1 ms  changed.update(onClose)
++928.3 ms  changed.close()
+  children=1
++1132.6 ms  changed.updated.onClose
++1430.6 ms  changed.read
+  afterCloseMs=502 children=0 first=null

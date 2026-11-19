@@ -1,0 +1,14 @@
+Run ac6301a6
+commit 87b3bacf294c5d594a8a5b7bb0ba9588cea6fdd7
+control
++1.0 ms  ReactDOM.render
++13.0 ms  DOM load
+  event=load#1  node=img#1  trusted=true
++15.0 ms  Image.onLoad
+  event=load#1  node=img#1  trusted=true
+changed
++0.0 ms  ReactDOM.render
++2.0 ms  Image.onLoad
+  event=null  node=img#2
++4.0 ms  DOM load
+  event=load#2  node=img#2  trusted=true
