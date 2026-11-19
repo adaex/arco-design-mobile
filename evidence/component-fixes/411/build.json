@@ -1,0 +1,12 @@
+{
+  "case": "keyboard-ref",
+  "issue": 411,
+  "commit": "f424903ba955d6b46e7c6c5fdfadd3c23fbd4500",
+  "base": "53875e1780e9a53a8c86dd959803e980ebb2c715",
+  "bundleSha256": "2dbbb90da675ac265ecf97cdb79d7ef113375b2676af4ffa09d1f06a67c3d3d6",
+  "entry": "packages/arcodesign/components/keyboard/index.tsx",
+  "productFiles": [
+    "packages/arcodesign/components/keyboard/index.tsx"
+  ],
+  "esbuild": "0.15.18"
+}

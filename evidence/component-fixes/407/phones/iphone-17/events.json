@@ -1,0 +1,27 @@
+{
+  "device": "iPhone 17",
+  "system": "iOS 26.2",
+  "browser": "Safari 26.2",
+  "commit": "ef36d7b6dedcb7befb9b329e123a7720b98b2a1d",
+  "run": "35c284ea",
+  "events": [
+    {
+      "source": "普通键盘",
+      "ms": 940,
+      "stage": 1,
+      "digits": "1234567890"
+    },
+    {
+      "source": "随机键盘",
+      "ms": 3724,
+      "stage": 2,
+      "digits": "8120534679"
+    },
+    {
+      "source": "普通键盘",
+      "ms": 6025,
+      "stage": 3,
+      "digits": "1234567890"
+    }
+  ]
+}

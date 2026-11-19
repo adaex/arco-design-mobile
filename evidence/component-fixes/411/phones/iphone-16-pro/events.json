@@ -1,0 +1,27 @@
+{
+  "device": "iPhone 16 Pro",
+  "system": "iOS 18.4.1",
+  "browser": "Safari 18.4",
+  "commit": "f424903ba955d6b46e7c6c5fdfadd3c23fbd4500",
+  "run": "dc299f2c",
+  "events": [
+    {
+      "source": "挂载 Keyboard",
+      "ms": 1,
+      "visible": true
+    },
+    {
+      "source": "读取页面上的键盘",
+      "ms": 1502,
+      "keys": 12,
+      "width": 402,
+      "height": 261
+    },
+    {
+      "source": "读取组件引用",
+      "ms": 1502,
+      "handle": "present",
+      "keyboard": "same-node"
+    }
+  ]
+}

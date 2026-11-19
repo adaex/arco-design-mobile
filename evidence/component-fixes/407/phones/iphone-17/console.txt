@@ -1,0 +1,8 @@
+Run 35c284ea
+commit ef36d7b6dedcb7befb9b329e123a7720b98b2a1d
++940 ms  普通键盘
+  stage=1 digits=1234567890
++3724 ms  随机键盘
+  stage=2 digits=8120534679
++6025 ms  普通键盘
+  stage=3 digits=1234567890

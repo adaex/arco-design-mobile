@@ -1,0 +1,27 @@
+{
+  "device": "vivo V2415A",
+  "system": "Android 15",
+  "browser": "vivo 浏览器 23.3.10.2",
+  "commit": "ef36d7b6dedcb7befb9b329e123a7720b98b2a1d",
+  "run": "193ff450",
+  "events": [
+    {
+      "source": "普通键盘",
+      "ms": 1000,
+      "stage": 1,
+      "digits": "1234567890"
+    },
+    {
+      "source": "随机键盘",
+      "ms": 3113.2,
+      "stage": 2,
+      "digits": "9876543210"
+    },
+    {
+      "source": "普通键盘",
+      "ms": 5461.1,
+      "stage": 3,
+      "digits": "1234567890"
+    }
+  ]
+}

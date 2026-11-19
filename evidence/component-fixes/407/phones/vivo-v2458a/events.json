@@ -1,0 +1,27 @@
+{
+  "device": "vivo V2458A",
+  "system": "Android 15",
+  "browser": "vivo 浏览器 23.6.10.2",
+  "commit": "ef36d7b6dedcb7befb9b329e123a7720b98b2a1d",
+  "run": "ca32cee2",
+  "events": [
+    {
+      "source": "普通键盘",
+      "ms": 897.5,
+      "stage": 1,
+      "digits": "1234567890"
+    },
+    {
+      "source": "随机键盘",
+      "ms": 3052.7,
+      "stage": 2,
+      "digits": "5896721340"
+    },
+    {
+      "source": "普通键盘",
+      "ms": 5561.8,
+      "stage": 3,
+      "digits": "1234567890"
+    }
+  ]
+}

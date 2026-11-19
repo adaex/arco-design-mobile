@@ -1,0 +1,8 @@
+Run bae9a97b
+commit ef36d7b6dedcb7befb9b329e123a7720b98b2a1d
++814 ms  普通键盘
+  stage=1 digits=1234567890
++3400 ms  随机键盘
+  stage=2 digits=7685241309
++6117 ms  普通键盘
+  stage=3 digits=1234567890

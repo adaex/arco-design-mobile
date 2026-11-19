@@ -1,0 +1,27 @@
+{
+  "device": "vivo V2458A",
+  "system": "Android 15",
+  "browser": "vivo 浏览器 23.6.10.2",
+  "commit": "f424903ba955d6b46e7c6c5fdfadd3c23fbd4500",
+  "run": "f382403f",
+  "events": [
+    {
+      "source": "挂载 Keyboard",
+      "ms": 0.1,
+      "visible": true
+    },
+    {
+      "source": "读取页面上的键盘",
+      "ms": 1030.9,
+      "keys": 12,
+      "width": 360,
+      "height": 261
+    },
+    {
+      "source": "读取组件引用",
+      "ms": 1031.5,
+      "handle": "present",
+      "keyboard": "same-node"
+    }
+  ]
+}

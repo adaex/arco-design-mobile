@@ -1,0 +1,8 @@
+Run 8152b1ef
+commit f424903ba955d6b46e7c6c5fdfadd3c23fbd4500
++0.1 ms  挂载 Keyboard
+  visible=true
++1223.3 ms  读取页面上的键盘
+  keys=12 width=360 height=261
++1223.7 ms  读取组件引用
+  handle=present keyboard=same-node

@@ -1,0 +1,12 @@
+{
+  "case": "keyboard-order",
+  "issue": 407,
+  "commit": "ef36d7b6dedcb7befb9b329e123a7720b98b2a1d",
+  "base": "53875e1780e9a53a8c86dd959803e980ebb2c715",
+  "bundleSha256": "ae4e926b82af18718ce7790e698d3e44ae5afbff965893c627d16c6c6d6539aa",
+  "entry": "packages/arcodesign/components/keyboard/index.tsx",
+  "productFiles": [
+    "packages/arcodesign/components/keyboard/index.tsx"
+  ],
+  "esbuild": "0.15.18"
+}

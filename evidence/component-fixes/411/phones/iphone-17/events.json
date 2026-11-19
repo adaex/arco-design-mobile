@@ -1,0 +1,27 @@
+{
+  "device": "iPhone 17",
+  "system": "iOS 26.2",
+  "browser": "Safari 26.2",
+  "commit": "f424903ba955d6b46e7c6c5fdfadd3c23fbd4500",
+  "run": "9803499b",
+  "events": [
+    {
+      "source": "挂载 Keyboard",
+      "ms": 0,
+      "visible": true
+    },
+    {
+      "source": "读取页面上的键盘",
+      "ms": 1667,
+      "keys": 12,
+      "width": 402,
+      "height": 261
+    },
+    {
+      "source": "读取组件引用",
+      "ms": 1667,
+      "handle": "present",
+      "keyboard": "same-node"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "device": "iPhone 16 Pro",
+  "system": "iOS 18.4.1",
+  "browser": "Safari 18.4",
+  "commit": "ef36d7b6dedcb7befb9b329e123a7720b98b2a1d",
+  "run": "bae9a97b",
+  "events": [
+    {
+      "source": "普通键盘",
+      "ms": 814,
+      "stage": 1,
+      "digits": "1234567890"
+    },
+    {
+      "source": "随机键盘",
+      "ms": 3400,
+      "stage": 2,
+      "digits": "7685241309"
+    },
+    {
+      "source": "普通键盘",
+      "ms": 6117,
+      "stage": 3,
+      "digits": "1234567890"
+    }
+  ]
+}

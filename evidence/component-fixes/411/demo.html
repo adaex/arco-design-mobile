@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>首次打开 Keyboard</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/style.min.css">
+<style>
+html { font-size: 50px }
+body { margin: 0; color: #20242a; background: white; font: 15px/1.45 system-ui, sans-serif }
+main { max-width: 540px; margin: auto; padding: 12px 14px }
+h1 { font-size: 21px; margin: 0 } p { margin: 5px 0 9px }
+button { font: inherit; padding: 5px 12px }
+#run-id { display: block; font: 13px/1.5 monospace; margin-top: 10px }
+pre { margin: 4px 0; padding: 8px; background: #f3f5f7; font: 13px/1.4 ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere }
+.sample-keyboard button { font: 15px/1.4 system-ui; padding: 4px 10px }
+</style></head>
+<body><div id="build-id" style="padding:3px 14px 0;font:13px/1.5 monospace;color:#384353"></div><main>
+<h1>首次打开 Keyboard</h1><p>数字键出现后，点键盘上方的「读取键盘引用」</p>
+<button id="action">打开键盘</button><div id="root"></div>
+<div id="run-id"></div><pre id="log"></pre>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-transition-group@4.4.2/dist/react-transition-group.min.js"></script>
+<script src="component-f424903ba955d6b46e7c6c5fdfadd3c23fbd4500.js"></script>
+<script>
+const byId = id => document.getElementById(id);
+const h = React.createElement;
+const run = Array.from(crypto.getRandomValues(new Uint8Array(4)), n => n.toString(16).padStart(2, '0')).join('');
+byId('run-id').textContent = 'Run ' + run;
+let start;
+function log(source, fields = {}) {
+  const ms = Number((performance.now() - start).toFixed(1));
+  const args = Object.entries(fields).map(([key, value]) => `${key}=${value}`).join(' ');
+  const line = `+${ms} ms  ${source}` + (args ? `\n  ${args}` : '');
+  console.log(source, {ms, ...fields});
+  byId('log').append(document.createTextNode(line + '\n'));
+}
+function finish() {
+  document.documentElement.dataset.complete = 'true';
+}
+
+byId('action').onclick = event => {
+  event.stopPropagation();
+  event.currentTarget.disabled = true;
+  const ref = React.createRef();
+  start = performance.now();
+  log('挂载 Keyboard', {visible: true});
+  function read() {
+    const node = document.querySelector('.sample-keyboard');
+    const rect = node.getBoundingClientRect();
+    const keys = node.querySelectorAll('.arco-keyboard-key').length;
+    log('读取页面上的键盘', {keys, width: Math.round(rect.width), height: Math.round(rect.height)});
+    const handle = ref.current;
+    const value = handle && handle.keyboard;
+    log('读取组件引用', {handle: handle ? 'present' : 'absent', keyboard: value === node ? 'same-node' : String(value)});
+    finish();
+  }
+  ReactDOM.render(h(Arco.Keyboard, {ref, visible: true, className: 'sample-keyboard',
+    title: h('button', {id: 'read', onClick: read}, '读取键盘引用'),
+    close: () => ReactDOM.unmountComponentAtNode(byId('root'))
+  }), byId('root'));
+};
+</script>
+<script>
+if(window.__arcoTestBuild !== 'f424903ba955d6b46e7c6c5fdfadd3c23fbd4500') throw new Error('组件版本不一致');
+document.getElementById('build-id').textContent='#411 · '+window.__arcoTestBuild.slice(0,10);
+</script></body></html>
