@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Keyboard · randomOrder</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/style.min.css">
+  <style>
+    html {font-size:50px} body {font:16px/1.45 -apple-system,Roboto,sans-serif; color:#1d2129; background:#fff}
+    main {max-width:560px; margin:auto; padding:24px 18px} h1 {font-size:22px; margin:0 0 6px}
+    p {margin:0 0 16px} main button {font-size:16px; padding:11px 16px; margin:0 8px 8px 0; border:1px solid #a4afbe; border-radius:6px; background:white}
+    .mode-title {font-size:16px; text-align:center; padding:3px 0 10px}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-transition-group@4.4.2/dist/react-transition-group.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@arco-design/mobile-react@2.39.1/dist/index.min.js"></script>
+  <script>
+    const h = React.createElement;
+    function Demo() {
+      const [mode, setMode] = React.useState(null);
+      const random = mode === 'random';
+      return h(React.Fragment, null,
+        h('main', null,
+          h('h1', null, '数字键盘'),
+          h('p', null, '依次打开普通、随机、普通键盘。每次用键盘左下角的收起键关闭'),
+          h('button', {id:'normal', onClick:() => setMode('normal')}, '打开普通键盘'),
+          h('button', {id:'random', onClick:() => setMode('random')}, '打开随机键盘')
+        ),
+        mode && h(Arco.Keyboard, {
+          visible: true, randomOrder: random, close: () => setMode(null),
+          title: h('div', {className:'mode-title'}, random ? '随机键盘' : '普通键盘')
+        })
+      );
+    }
+    ReactDOM.render(h(Demo), document.getElementById('root'));
+  </script>
+</body>
+</html>
