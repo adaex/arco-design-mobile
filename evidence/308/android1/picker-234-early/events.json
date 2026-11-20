@@ -1,0 +1,196 @@
+{
+  "scenario": "picker",
+  "version": "2.34.0",
+  "page": "picker-234.html",
+  "commit": "42445e5c9d62da918bdbcf48afc01c77916f8519",
+  "run": "4d6d83e81754",
+  "startedAt": "2026-11-20T09:45:15.181Z",
+  "sampledAt": "2026-11-20T09:45:18.760Z",
+  "model": "vivo V2425A",
+  "system": "Android 15",
+  "browser": "vivo 浏览器 21.6.11.1",
+  "devicePixelRatio": 3.5,
+  "events": [
+    {
+      "ms": 69.59999990463257,
+      "source": "回调 #1 · 打开前",
+      "text": "value=[\"1\"]　data=[]",
+      "data": {
+        "n": 1,
+        "phase": "打开前",
+        "value": [
+          "1"
+        ],
+        "data": [],
+        "early": true,
+        "form": true
+      }
+    },
+    {
+      "ms": 93.09999990463257,
+      "source": "回调 #2 · 打开前",
+      "text": "value=[\"1\"]　data=[{\"label\":\"male\",\"value\":\"1\"}]",
+      "data": {
+        "n": 2,
+        "phase": "打开前",
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ],
+        "early": true,
+        "form": true
+      }
+    },
+    {
+      "ms": 1706,
+      "source": "点击选择框",
+      "text": "打开 Picker",
+      "data": {
+        "trusted": true
+      }
+    },
+    {
+      "ms": 1706.3999999761581,
+      "source": "回调 #3 · 点击打开后",
+      "text": "value=[\"1\"]　data=[{\"label\":\"male\",\"value\":\"1\"}]",
+      "data": {
+        "n": 3,
+        "phase": "点击打开后",
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ],
+        "early": true,
+        "form": true
+      }
+    },
+    {
+      "ms": 3370.899999976158,
+      "source": "点击确定",
+      "text": "确认当前选择",
+      "data": {
+        "trusted": true
+      }
+    },
+    {
+      "ms": 3392.6999999284744,
+      "source": "回调 #4 · 点击确定后",
+      "text": "value=[\"1\"]　data=[{\"label\":\"male\",\"value\":\"1\"}]",
+      "data": {
+        "n": 4,
+        "phase": "点击确定后",
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ],
+        "early": true,
+        "form": true
+      }
+    },
+    {
+      "ms": 3394,
+      "source": "onOk",
+      "text": "value=[\"1\"]，label=[\"male\"]",
+      "data": {
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ms": 3394.2999999523163,
+      "source": "回调 #5 · 点击确定后",
+      "text": "value=[\"1\"]　data=[{\"label\":\"male\",\"value\":\"1\"}]",
+      "data": {
+        "n": 5,
+        "phase": "点击确定后",
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ],
+        "early": true,
+        "form": true
+      }
+    },
+    {
+      "ms": 3395.1999999284744,
+      "source": "回调 #6 · 点击确定后",
+      "text": "value=[\"1\"]　data=[{\"label\":\"male\",\"value\":\"1\"}]",
+      "data": {
+        "n": 6,
+        "phase": "点击确定后",
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ],
+        "early": true,
+        "form": true
+      }
+    },
+    {
+      "ms": 3415.5999999046326,
+      "source": "回调 #7 · 点击确定后",
+      "text": "value=[\"1\"]　data=[{\"label\":\"male\",\"value\":\"1\"}]",
+      "data": {
+        "n": 7,
+        "phase": "点击确定后",
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ],
+        "early": true,
+        "form": true
+      }
+    }
+  ],
+  "afterCaptureEvents": [],
+  "lastReportAt": "2026-11-20T09:45:18.760Z",
+  "query": {
+    "early": "1"
+  },
+  "screenshots": [
+    {
+      "file": "before.png",
+      "capturedAt": "2026-11-20T09:45:16.222447+00:00",
+      "eventCount": 2,
+      "sha256": "ecc0bcbe22cdae264fda0c5498282c6015ac2caf2c185bfc9731836b4ecd5206"
+    }
+  ],
+  "inputMethod": "手机上的系统触摸"
+}

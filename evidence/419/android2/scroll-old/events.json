@@ -1,0 +1,416 @@
+{
+  "scenario": "scroll",
+  "version": "初次评审提交",
+  "page": "scroll-old.html",
+  "commit": "d46f4f154b17ece88fd6fa8872195314c269ee24",
+  "run": "a4c54a8ec868",
+  "startedAt": "2026-11-20T09:45:46.076Z",
+  "sampledAt": "2026-11-20T09:45:50.555Z",
+  "model": "vivo V2458A",
+  "system": "Android 15",
+  "browser": "vivo Browser 23.6.10.2",
+  "devicePixelRatio": 3.5,
+  "events": [
+    {
+      "ms": 332.5,
+      "source": "初始读取",
+      "text": "内层高 100，内容高 800，overflow-y=hidden，y=0",
+      "data": {
+        "innerTop": 0,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0,
+        "viewport": 100,
+        "content": 800,
+        "overflowY": "hidden"
+      }
+    },
+    {
+      "ms": 1039.6999999284744,
+      "source": "touchstart",
+      "text": "触点 (132, 169)，内层 y=0",
+      "data": {
+        "at": 1640.5999999046326,
+        "kind": "touchstart",
+        "id": 0,
+        "x": 131.71429443359375,
+        "y": 168.5714569091797,
+        "trusted": true,
+        "innerTop": 0,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 1204.3999999761581,
+      "source": "touchcancel",
+      "text": "触点 (132, 137)，内层 y=0",
+      "data": {
+        "at": 1805.2999999523163,
+        "kind": "touchcancel",
+        "id": 0,
+        "x": 131.71429443359375,
+        "y": 137.17160034179688,
+        "trusted": true,
+        "innerTop": 0,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 3238.5,
+      "source": "停稳后读取",
+      "text": "内层 y=0，外层 x=0、y=0；回调 内 0、外 0",
+      "data": {
+        "innerTop": 0,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0,
+        "phase": "touch",
+        "counts": {
+          "inner": 0,
+          "outer": 0
+        },
+        "overflowY": "hidden",
+        "viewport": 100,
+        "content": 800,
+        "events": [
+          {
+            "at": 1640.5999999046326,
+            "kind": "touchstart",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 168.5714569091797,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1707.3999999761581,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 157.17160034179688,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1720.2999999523163,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 153.39620971679688,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1737.6999999284744,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 150.87139892578125,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1753.3999999761581,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 147.17160034179688,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1770.0999999046326,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 143.97154235839844,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1787,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 140.57115173339844,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1805.2999999523163,
+            "kind": "touchcancel",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 137.17160034179688,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          }
+        ]
+      }
+    },
+    {
+      "ms": 4121.899999976158,
+      "source": "程序滚动",
+      "text": "将内层 y 从 0 设为 120",
+      "data": {
+        "before": {
+          "innerTop": 0,
+          "innerLeft": 0,
+          "outerTop": 0,
+          "outerLeft": 0,
+          "pageY": 0
+        },
+        "requested": 120
+      }
+    },
+    {
+      "ms": 4134,
+      "source": "inner onScroll",
+      "text": "目标 inner，自身 true，内层 y=120，外层 x=0",
+      "data": {
+        "at": 4734.799999952316,
+        "phase": "program",
+        "owner": "inner",
+        "ownTarget": true,
+        "target": "inner",
+        "innerTop": 120,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 4135.899999976158,
+      "source": "outer onScroll",
+      "text": "目标 inner，自身 false，内层 y=120，外层 x=0",
+      "data": {
+        "at": 4736.599999904633,
+        "phase": "program",
+        "owner": "outer",
+        "ownTarget": false,
+        "target": "inner",
+        "innerTop": 120,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 4475.100000023842,
+      "source": "程序滚动后读取",
+      "text": "内层 y=120，外层 x=0、y=0；回调 内 1、外 1",
+      "data": {
+        "innerTop": 120,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0,
+        "phase": "program",
+        "counts": {
+          "inner": 1,
+          "outer": 1
+        },
+        "overflowY": "hidden",
+        "viewport": 100,
+        "content": 800,
+        "events": [
+          {
+            "at": 1640.5999999046326,
+            "kind": "touchstart",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 168.5714569091797,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1707.3999999761581,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 157.17160034179688,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1720.2999999523163,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 153.39620971679688,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1737.6999999284744,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 150.87139892578125,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1753.3999999761581,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 147.17160034179688,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1770.0999999046326,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 143.97154235839844,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1787,
+            "kind": "touchmove",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 140.57115173339844,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1805.2999999523163,
+            "kind": "touchcancel",
+            "id": 0,
+            "x": 131.71429443359375,
+            "y": 137.17160034179688,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 4734.799999952316,
+            "phase": "program",
+            "owner": "inner",
+            "ownTarget": true,
+            "target": "inner",
+            "innerTop": 120,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 4736.599999904633,
+            "phase": "program",
+            "owner": "outer",
+            "ownTarget": false,
+            "target": "inner",
+            "innerTop": 120,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          }
+        ]
+      }
+    }
+  ],
+  "afterCaptureEvents": [
+    {
+      "ms": 5704.299999952316,
+      "source": "页面错误",
+      "text": "Script error.",
+      "data": {}
+    }
+  ],
+  "lastReportAt": "2026-11-20T09:45:52.290Z",
+  "query": {},
+  "screenshots": [
+    {
+      "file": "after-swipe.png",
+      "capturedAt": "2026-11-20T09:45:50.131836+00:00",
+      "eventCount": 4,
+      "sha256": "bcfc03d9665f9871d4a85cbbdb63b2c7455830d6232fd1c2ae626cbd73a5145a"
+    },
+    {
+      "file": "after-program.png",
+      "capturedAt": "2026-11-20T09:45:51.879028+00:00",
+      "eventCount": 8,
+      "sha256": "2157072f9f2b6e23e10fb27186387c32255461827f6bb8365c13a71fcbd6f2f8"
+    }
+  ],
+  "inputMethod": "手机上的系统触摸"
+}

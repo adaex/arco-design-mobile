@@ -1,0 +1,78 @@
+{
+  "scenario": "sticky",
+  "version": "初次评审提交",
+  "page": "sticky-old.html",
+  "commit": "7a8fe9f4aae3f3c52bed41a771539bbadf1284ee",
+  "run": "483dc36f9284",
+  "startedAt": "2026-11-20T09:46:12.424Z",
+  "sampledAt": "2026-11-20T09:46:12.606Z",
+  "model": "iPhone 17",
+  "system": "iOS 26.2",
+  "browser": "Safari 26.2",
+  "devicePixelRatio": 3,
+  "events": [
+    {
+      "ms": 116.00000000000003,
+      "source": "DOM 读取",
+      "text": "顶边差 0.490 px，position=fixed",
+      "data": {
+        "requested": 0.49,
+        "at": 236.00000000000003,
+        "offset": 0.48999786376953125,
+        "scrollTop": 0,
+        "position": "fixed",
+        "headerTop": 100,
+        "containerTop": 100,
+        "placeholderTop": 100.48999786376953,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 149,
+      "source": "DOM 读取",
+      "text": "顶边差 0.510 px，position=static",
+      "data": {
+        "requested": 0.51,
+        "at": 269,
+        "offset": 0.5100021362304688,
+        "scrollTop": 0,
+        "position": "static",
+        "headerTop": 100,
+        "containerTop": 100,
+        "placeholderTop": 100.51000213623047,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 183,
+      "source": "DOM 读取",
+      "text": "顶边差 0.490 px，position=fixed",
+      "data": {
+        "requested": 0.49,
+        "at": 303,
+        "offset": 0.48999786376953125,
+        "scrollTop": 0,
+        "position": "fixed",
+        "headerTop": 100,
+        "containerTop": 100,
+        "placeholderTop": 100.48999786376953,
+        "pageY": 0
+      }
+    }
+  ],
+  "afterCaptureEvents": [],
+  "lastReportAt": "2026-11-20T09:46:12.606Z",
+  "query": {
+    "mode": "controlled"
+  },
+  "screenshots": [
+    {
+      "file": "screen.png",
+      "capturedAt": "2026-11-20T09:46:13.621264+00:00",
+      "eventCount": 3,
+      "sha256": "999c1a9547da375f66962a8425dcc65c1d26869fee25361ed95ad8b789453890"
+    }
+  ],
+  "inputs": [],
+  "inputMethod": "浏览器内受控布局与 DOM 读取"
+}

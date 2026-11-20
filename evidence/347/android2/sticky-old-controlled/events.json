@@ -1,0 +1,84 @@
+{
+  "scenario": "sticky",
+  "version": "初次评审提交",
+  "page": "sticky-old.html",
+  "commit": "7a8fe9f4aae3f3c52bed41a771539bbadf1284ee",
+  "run": "8d16b33cb9b8",
+  "startedAt": "2026-11-20T09:46:06.704Z",
+  "sampledAt": "2026-11-20T09:46:06.959Z",
+  "model": "vivo V2458A",
+  "system": "Android 15",
+  "browser": "vivo Browser 23.6.10.2",
+  "devicePixelRatio": 3.5,
+  "events": [
+    {
+      "ms": 187.79999995231628,
+      "source": "DOM 读取",
+      "text": "顶边差 0.490 px，position=fixed",
+      "data": {
+        "requested": 0.49,
+        "at": 562.7999999523163,
+        "offset": 0.48999786376953125,
+        "scrollTop": 0,
+        "position": "fixed",
+        "headerTop": 100.58482360839844,
+        "containerTop": 100.58482360839844,
+        "placeholderTop": 101.07482147216797,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 219.5,
+      "source": "DOM 读取",
+      "text": "顶边差 0.510 px，position=static",
+      "data": {
+        "requested": 0.51,
+        "at": 594.5,
+        "offset": 0.5100021362304688,
+        "scrollTop": 0,
+        "position": "static",
+        "headerTop": 100.58482360839844,
+        "containerTop": 100.58482360839844,
+        "placeholderTop": 101.0948257446289,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 252.60000002384186,
+      "source": "DOM 读取",
+      "text": "顶边差 0.490 px，position=fixed",
+      "data": {
+        "requested": 0.49,
+        "at": 627.6000000238419,
+        "offset": 0.48999786376953125,
+        "scrollTop": 0,
+        "position": "fixed",
+        "headerTop": 100.58482360839844,
+        "containerTop": 100.58482360839844,
+        "placeholderTop": 101.07482147216797,
+        "pageY": 0
+      }
+    }
+  ],
+  "afterCaptureEvents": [
+    {
+      "ms": 1013.8999999761581,
+      "source": "页面错误",
+      "text": "Script error.",
+      "data": {}
+    }
+  ],
+  "lastReportAt": "2026-11-20T09:46:08.289Z",
+  "query": {
+    "mode": "controlled"
+  },
+  "screenshots": [
+    {
+      "file": "readings.png",
+      "capturedAt": "2026-11-20T09:46:07.840599+00:00",
+      "eventCount": 3,
+      "sha256": "a62f5b7f080752d801c8c8783c7d80b88cbfe07f547f0b6fc656ff0bdae841d6"
+    }
+  ],
+  "inputMethod": "浏览器内受控布局与 DOM 读取"
+}

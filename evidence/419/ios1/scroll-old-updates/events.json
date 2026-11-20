@@ -1,0 +1,122 @@
+{
+  "scenario": "scroll",
+  "version": "初次评审提交",
+  "page": "scroll-old.html",
+  "commit": "d46f4f154b17ece88fd6fa8872195314c269ee24",
+  "run": "55f4b3ae2e5c",
+  "startedAt": "2026-11-20T09:47:43.731Z",
+  "sampledAt": "2026-11-20T09:47:45.900Z",
+  "model": "iPhone 16 Pro",
+  "system": "iOS 18.5",
+  "browser": "Safari 18.5",
+  "devicePixelRatio": 3,
+  "events": [
+    {
+      "ms": 433,
+      "source": "初始高度",
+      "text": "视口／内容 100／100，滑块 无",
+      "data": {
+        "viewport": 100,
+        "content": 100,
+        "thumb": false
+      }
+    },
+    {
+      "ms": 983,
+      "source": "内容增高",
+      "text": "视口／内容 100／600，滑块 无",
+      "data": {
+        "viewport": 100,
+        "content": 600,
+        "thumb": false
+      }
+    },
+    {
+      "ms": 1069,
+      "source": "主动 update()",
+      "text": "视口／内容 100／600，滑块 有",
+      "data": {
+        "viewport": 100,
+        "content": 600,
+        "thumb": true
+      }
+    },
+    {
+      "ms": 1076,
+      "source": "页面错误",
+      "text": "ResizeObserver loop completed with undelivered notifications.",
+      "data": {}
+    },
+    {
+      "ms": 1323,
+      "source": "切换前",
+      "text": "方向 ltr，滑块 x=0.00",
+      "data": {
+        "dir": "ltr",
+        "rel": 0
+      }
+    },
+    {
+      "ms": 1676,
+      "source": "切为 RTL",
+      "text": "方向 rtl，滑块 x=0.00",
+      "data": {
+        "dir": "rtl",
+        "rel": 0
+      }
+    },
+    {
+      "ms": 1759,
+      "source": "主动 update()",
+      "text": "方向 rtl，滑块 x=133.34",
+      "data": {
+        "dir": "rtl",
+        "rel": 133.34375
+      }
+    },
+    {
+      "ms": 1768,
+      "source": "页面错误",
+      "text": "ResizeObserver loop completed with undelivered notifications.",
+      "data": {}
+    },
+    {
+      "ms": 2168,
+      "source": "右下角",
+      "text": "滑块相交 1.89 × 2.00 CSS px",
+      "data": {
+        "dx": 1.890625,
+        "dy": 2,
+        "horizontal": {
+          "left": 129.5,
+          "right": 207.890625,
+          "top": 177,
+          "bottom": 181
+        },
+        "vertical": {
+          "left": 206,
+          "right": 210,
+          "top": 131,
+          "bottom": 179
+        },
+        "top": 100,
+        "left": 300
+      }
+    }
+  ],
+  "afterCaptureEvents": [],
+  "lastReportAt": "2026-11-20T09:47:45.900Z",
+  "query": {
+    "mode": "updates"
+  },
+  "screenshots": [
+    {
+      "file": "screen.png",
+      "capturedAt": "2026-11-20T09:47:46.822232+00:00",
+      "eventCount": 9,
+      "sha256": "34b138d14afd214452c08d150473e22ffdbd9ab96cd26a4357a6d90a0c983720"
+    }
+  ],
+  "inputs": [],
+  "inputMethod": "浏览器内受控布局与 DOM 读取"
+}

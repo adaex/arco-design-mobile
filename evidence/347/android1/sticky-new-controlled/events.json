@@ -1,0 +1,77 @@
+{
+  "scenario": "sticky",
+  "version": "复审提交",
+  "page": "sticky-new.html",
+  "commit": "c40889165574a9a98be0eddda13d79bb0961a206",
+  "run": "df607c737562",
+  "startedAt": "2026-11-20T09:45:59.691Z",
+  "sampledAt": "2026-11-20T09:45:59.908Z",
+  "model": "vivo V2425A",
+  "system": "Android 15",
+  "browser": "vivo Browser 21.6.11.1",
+  "devicePixelRatio": 3.5,
+  "events": [
+    {
+      "ms": 148.60000002384186,
+      "source": "DOM 读取",
+      "text": "顶边差 0.490 px，position=fixed",
+      "data": {
+        "requested": 0.49,
+        "at": 342.39999997615814,
+        "offset": 0.48999786376953125,
+        "scrollTop": 0,
+        "position": "fixed",
+        "headerTop": 100.58482360839844,
+        "containerTop": 100.58482360839844,
+        "placeholderTop": 101.07482147216797,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 181.70000004768372,
+      "source": "DOM 读取",
+      "text": "顶边差 0.510 px，position=fixed",
+      "data": {
+        "requested": 0.51,
+        "at": 375.7000000476837,
+        "offset": 0.5100021362304688,
+        "scrollTop": 0,
+        "position": "fixed",
+        "headerTop": 100.58482360839844,
+        "containerTop": 100.58482360839844,
+        "placeholderTop": 101.0948257446289,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 215.39999997615814,
+      "source": "DOM 读取",
+      "text": "顶边差 0.490 px，position=fixed",
+      "data": {
+        "requested": 0.49,
+        "at": 409.2999999523163,
+        "offset": 0.48999786376953125,
+        "scrollTop": 0,
+        "position": "fixed",
+        "headerTop": 100.58482360839844,
+        "containerTop": 100.58482360839844,
+        "placeholderTop": 101.07482147216797,
+        "pageY": 0
+      }
+    }
+  ],
+  "afterCaptureEvents": [],
+  "lastReportAt": "2026-11-20T09:45:59.908Z",
+  "query": {
+    "mode": "controlled"
+  },
+  "screenshots": [
+    {
+      "file": "readings.png",
+      "capturedAt": "2026-11-20T09:46:00.300907+00:00",
+      "eventCount": 3,
+      "sha256": "36cd00b07be9a2e9ee3fabc7a0f98645d83c5b56f71069ecaaf518f56f6a0438"
+    }
+  ],
+  "inputMethod": "浏览器内受控布局与 DOM 读取"
+}

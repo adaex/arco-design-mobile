@@ -1,0 +1,196 @@
+{
+  "scenario": "picker",
+  "version": "main",
+  "page": "picker-main.html",
+  "commit": "0aeba6f38778f73f89660a6d5877ad82ae783118",
+  "run": "b62c7318f16d",
+  "startedAt": "2026-11-20T09:50:53.316Z",
+  "sampledAt": "2026-11-20T09:50:56.816Z",
+  "model": "iPhone 16 Pro",
+  "system": "iOS 18.5",
+  "browser": "Safari 18.5",
+  "devicePixelRatio": 3,
+  "events": [
+    {
+      "ms": 177,
+      "source": "回调 #1 · 打开前",
+      "text": "value=[\"1\"]　data=[]",
+      "data": {
+        "n": 1,
+        "phase": "打开前",
+        "value": [
+          "1"
+        ],
+        "data": [],
+        "early": false,
+        "form": true
+      }
+    },
+    {
+      "ms": 216,
+      "source": "回调 #2 · 打开前",
+      "text": "value=[\"1\"]　data=[]",
+      "data": {
+        "n": 2,
+        "phase": "打开前",
+        "value": [
+          "1"
+        ],
+        "data": [],
+        "early": false,
+        "form": true
+      }
+    },
+    {
+      "ms": 1634,
+      "source": "点击选择框",
+      "text": "打开 Picker",
+      "data": {
+        "trusted": true
+      }
+    },
+    {
+      "ms": 1635,
+      "source": "回调 #3 · 点击打开后",
+      "text": "value=[\"1\"]　data=[]",
+      "data": {
+        "n": 3,
+        "phase": "点击打开后",
+        "value": [
+          "1"
+        ],
+        "data": [],
+        "early": false,
+        "form": true
+      }
+    },
+    {
+      "ms": 3287,
+      "source": "点击确定",
+      "text": "确认当前选择",
+      "data": {
+        "trusted": true
+      }
+    },
+    {
+      "ms": 3310,
+      "source": "回调 #4 · 点击确定后",
+      "text": "value=[\"1\"]　data=[{\"label\":\"male\",\"value\":\"1\"}]",
+      "data": {
+        "n": 4,
+        "phase": "点击确定后",
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ],
+        "early": false,
+        "form": true
+      }
+    },
+    {
+      "ms": 3313,
+      "source": "onOk",
+      "text": "value=[\"1\"]，label=[\"male\"]",
+      "data": {
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ms": 3314,
+      "source": "回调 #5 · 点击确定后",
+      "text": "value=[\"1\"]　data=[{\"label\":\"male\",\"value\":\"1\"}]",
+      "data": {
+        "n": 5,
+        "phase": "点击确定后",
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ],
+        "early": false,
+        "form": true
+      }
+    },
+    {
+      "ms": 3315,
+      "source": "回调 #6 · 点击确定后",
+      "text": "value=[\"1\"]　data=[{\"label\":\"male\",\"value\":\"1\"}]",
+      "data": {
+        "n": 6,
+        "phase": "点击确定后",
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ],
+        "early": false,
+        "form": true
+      }
+    },
+    {
+      "ms": 3337,
+      "source": "回调 #7 · 点击确定后",
+      "text": "value=[\"1\"]　data=[{\"label\":\"male\",\"value\":\"1\"}]",
+      "data": {
+        "n": 7,
+        "phase": "点击确定后",
+        "value": [
+          "1"
+        ],
+        "data": [
+          {
+            "label": "male",
+            "value": "1"
+          }
+        ],
+        "early": false,
+        "form": true
+      }
+    }
+  ],
+  "afterCaptureEvents": [],
+  "lastReportAt": "2026-11-20T09:50:56.816Z",
+  "query": {
+    "mode": "form"
+  },
+  "screenshots": [
+    {
+      "file": "confirmed.png",
+      "capturedAt": "2026-11-20T09:50:58.348985+00:00",
+      "eventCount": 10,
+      "sha256": "9f64c636cb173e60682848a491fadb24d008a9dd47671f0b428160141b8c03fc"
+    }
+  ],
+  "inputs": [
+    {
+      "action": "tap",
+      "target": "open"
+    },
+    {
+      "action": "tap",
+      "target": "confirm"
+    }
+  ],
+  "inputMethod": "手机上的系统触摸"
+}

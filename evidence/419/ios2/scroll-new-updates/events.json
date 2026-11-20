@@ -1,0 +1,110 @@
+{
+  "scenario": "scroll",
+  "version": "复审提交",
+  "page": "scroll-new.html",
+  "commit": "33868c03bf5bed1ecdb252131f22b11775fc1dd3",
+  "run": "110cb8c6f021",
+  "startedAt": "2026-11-20T09:48:04.843Z",
+  "sampledAt": "2026-11-20T09:48:06.915Z",
+  "model": "iPhone 17",
+  "system": "iOS 26.2",
+  "browser": "Safari 26.2",
+  "devicePixelRatio": 3,
+  "events": [
+    {
+      "ms": 343,
+      "source": "初始高度",
+      "text": "视口／内容 100／100，滑块 无",
+      "data": {
+        "viewport": 100,
+        "content": 100,
+        "thumb": false
+      }
+    },
+    {
+      "ms": 895,
+      "source": "内容增高",
+      "text": "视口／内容 100／600，滑块 有",
+      "data": {
+        "viewport": 100,
+        "content": 600,
+        "thumb": true
+      }
+    },
+    {
+      "ms": 978,
+      "source": "主动 update()",
+      "text": "视口／内容 100／600，滑块 有",
+      "data": {
+        "viewport": 100,
+        "content": 600,
+        "thumb": true
+      }
+    },
+    {
+      "ms": 1232,
+      "source": "切换前",
+      "text": "方向 ltr，滑块 x=0.00",
+      "data": {
+        "dir": "ltr",
+        "rel": 0
+      }
+    },
+    {
+      "ms": 1585,
+      "source": "切为 RTL",
+      "text": "方向 rtl，滑块 x=133.34",
+      "data": {
+        "dir": "rtl",
+        "rel": 133.34375
+      }
+    },
+    {
+      "ms": 1667,
+      "source": "主动 update()",
+      "text": "方向 rtl，滑块 x=133.34",
+      "data": {
+        "dir": "rtl",
+        "rel": 133.34375
+      }
+    },
+    {
+      "ms": 2071,
+      "source": "右下角",
+      "text": "滑块相交 0.09 × 0.00 CSS px",
+      "data": {
+        "dx": 0.09375,
+        "dy": 0,
+        "horizontal": {
+          "left": 128.5,
+          "right": 206.09375,
+          "top": 194,
+          "bottom": 198
+        },
+        "vertical": {
+          "left": 206,
+          "right": 210,
+          "top": 147,
+          "bottom": 194
+        },
+        "top": 100,
+        "left": 300
+      }
+    }
+  ],
+  "afterCaptureEvents": [],
+  "lastReportAt": "2026-11-20T09:48:06.915Z",
+  "query": {
+    "mode": "updates"
+  },
+  "screenshots": [
+    {
+      "file": "screen.png",
+      "capturedAt": "2026-11-20T09:48:07.709570+00:00",
+      "eventCount": 7,
+      "sha256": "b680074142af6386a71e2d3120097136938ff22d978301490e7d811addc49a30"
+    }
+  ],
+  "inputs": [],
+  "inputMethod": "浏览器内受控布局与 DOM 读取"
+}

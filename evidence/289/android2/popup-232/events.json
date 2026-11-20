@@ -1,0 +1,132 @@
+{
+  "scenario": "popup",
+  "version": "2.32.0",
+  "page": "popup-232.html",
+  "commit": "72f78e976347aa9f57858d414aba6063e7de62f6",
+  "run": "bcc1f3bcff5e",
+  "startedAt": "2026-11-20T09:44:51.845Z",
+  "sampledAt": "2026-11-20T09:44:54.900Z",
+  "model": "vivo V2458A",
+  "system": "Android 15",
+  "browser": "vivo 浏览器 23.6.10.2",
+  "devicePixelRatio": 3.5,
+  "events": [
+    {
+      "ms": 1168.2000000476837,
+      "source": "打开 Popup",
+      "text": "visible 改为 true",
+      "data": {
+        "trusted": true,
+        "openedAt": 1623.3000000715256
+      }
+    },
+    {
+      "ms": 1657.3999999761581,
+      "source": "onOpen",
+      "text": "弹层进入动画结束",
+      "data": {
+        "sinceOpen": 489.10000002384186
+      }
+    },
+    {
+      "ms": 3046.399999976158,
+      "source": "读取 Popup",
+      "text": "公开句柄 存在，按钮可见",
+      "data": {
+        "readAt": 3501.2000000476837,
+        "trusted": true,
+        "handlePresent": true,
+        "afterOpenMs": 1877.8999999761581,
+        "afterShownMs": 1388.7999999523163,
+        "buttonHit": true,
+        "contentRect": {
+          "x": 0,
+          "y": 530,
+          "width": 360.0000305175781,
+          "height": 100.00000762939453
+        },
+        "contentOpacity": "1",
+        "maskOpacity": "1"
+      }
+    },
+    {
+      "ms": 3051.7000000476837,
+      "source": "dom",
+      "text": "页面 DIV 360 × 0　ref.dom = null",
+      "data": {
+        "readAt": 3501.2000000476837,
+        "field": "dom",
+        "selector": "arco-masking all-border-box arco-popup",
+        "connected": true,
+        "nodeType": "DIV",
+        "rect": {
+          "x": 0,
+          "y": 240.8973388671875,
+          "width": 360.0000305175781,
+          "height": 0
+        },
+        "publicValue": "null",
+        "identical": false
+      }
+    },
+    {
+      "ms": 3053.3000000715256,
+      "source": "mask",
+      "text": "页面 DIV 360 × 630　ref.mask = null",
+      "data": {
+        "readAt": 3501.2000000476837,
+        "field": "mask",
+        "selector": "arco-masking-mask arco-popup-mask arco-fade-enter-done",
+        "connected": true,
+        "nodeType": "DIV",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 360.0000305175781,
+          "height": 630
+        },
+        "publicValue": "null",
+        "identical": false
+      }
+    },
+    {
+      "ms": 3054.3000000715256,
+      "source": "content",
+      "text": "页面 DIV 360 × 100　ref.content = null",
+      "data": {
+        "readAt": 3501.2000000476837,
+        "field": "content",
+        "selector": "arco-masking-content arco-popup-content bottom arco-slide-from-bottom-enter-done",
+        "connected": true,
+        "nodeType": "DIV",
+        "rect": {
+          "x": 0,
+          "y": 530,
+          "width": 360.0000305175781,
+          "height": 100.00000762939453
+        },
+        "publicValue": "null",
+        "identical": false
+      }
+    }
+  ],
+  "afterCaptureEvents": [
+    {
+      "ms": 3919.3000000715256,
+      "source": "页面错误",
+      "text": "Script error.",
+      "data": {}
+    }
+  ],
+  "lastReportAt": "2026-11-20T09:44:56.290Z",
+  "query": {},
+  "screenshots": [
+    {
+      "file": "visible-ref.png",
+      "capturedAt": "2026-11-20T09:44:55.861307+00:00",
+      "eventCount": 6,
+      "sha256": "8af52aee1d6c3de93b63e4e822584d4eec10bb682904e883eb55bccc7541f1c3"
+    }
+  ],
+  "inputMethod": "手机上的系统触摸"
+}

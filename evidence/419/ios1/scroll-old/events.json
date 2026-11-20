@@ -1,0 +1,660 @@
+{
+  "scenario": "scroll",
+  "version": "初次评审提交",
+  "page": "scroll-old.html",
+  "commit": "d46f4f154b17ece88fd6fa8872195314c269ee24",
+  "run": "249fdcfa8e49",
+  "startedAt": "2026-11-20T09:46:53.255Z",
+  "sampledAt": "2026-11-20T09:46:59.721Z",
+  "model": "iPhone 16 Pro",
+  "system": "iOS 18.5",
+  "browser": "Safari 18.5",
+  "devicePixelRatio": 3,
+  "events": [
+    {
+      "ms": 234,
+      "source": "初始读取",
+      "text": "内层高 100，内容高 800，overflow-y=hidden，y=0",
+      "data": {
+        "innerTop": 0,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0,
+        "viewport": 100,
+        "content": 800,
+        "overflowY": "hidden"
+      }
+    },
+    {
+      "ms": 1285,
+      "source": "touchstart",
+      "text": "触点 (120, 168)，内层 y=0",
+      "data": {
+        "at": 1475,
+        "kind": "touchstart",
+        "id": -1293288445,
+        "x": 120,
+        "y": 168,
+        "trusted": true,
+        "innerTop": 0,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 1526,
+      "source": "touchend",
+      "text": "触点 (120, 98)，内层 y=0",
+      "data": {
+        "at": 1716,
+        "kind": "touchend",
+        "id": -1293288445,
+        "x": 120,
+        "y": 98,
+        "trusted": true,
+        "innerTop": 0,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 29
+      }
+    },
+    {
+      "ms": 4848,
+      "source": "停稳后读取",
+      "text": "内层 y=0，外层 x=0、y=0；回调 内 0、外 0",
+      "data": {
+        "innerTop": 0,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0,
+        "phase": "touch",
+        "counts": {
+          "inner": 0,
+          "outer": 0
+        },
+        "overflowY": "hidden",
+        "viewport": 100,
+        "content": 800,
+        "events": [
+          {
+            "at": 1475,
+            "kind": "touchstart",
+            "id": -1293288445,
+            "x": 120,
+            "y": 168,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1485,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 166,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1487,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 162,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1502,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 157,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1519.0000000000002,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 154,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1519.0000000000002,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 152,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1527.0000000000002,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 149,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1535.0000000000002,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 146,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 1
+          },
+          {
+            "at": 1565,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 138,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 4
+          },
+          {
+            "at": 1578,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 133,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 7
+          },
+          {
+            "at": 1607,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 124,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 12
+          },
+          {
+            "at": 1619,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 119,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 15
+          },
+          {
+            "at": 1648.0000000000002,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 111,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 19
+          },
+          {
+            "at": 1665,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 106,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 22
+          },
+          {
+            "at": 1682,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 102,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 24
+          },
+          {
+            "at": 1698,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 98,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 27
+          },
+          {
+            "at": 1716,
+            "kind": "touchend",
+            "id": -1293288445,
+            "x": 120,
+            "y": 98,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 29
+          }
+        ]
+      }
+    },
+    {
+      "ms": 6112.000000000001,
+      "source": "程序滚动",
+      "text": "将内层 y 从 0 设为 120",
+      "data": {
+        "before": {
+          "innerTop": 0,
+          "innerLeft": 0,
+          "outerTop": 0,
+          "outerLeft": 0,
+          "pageY": 0
+        },
+        "requested": 120
+      }
+    },
+    {
+      "ms": 6116,
+      "source": "inner onScroll",
+      "text": "目标 inner，自身 true，内层 y=120，外层 x=0",
+      "data": {
+        "at": 6306,
+        "phase": "program",
+        "owner": "inner",
+        "ownTarget": true,
+        "target": "inner",
+        "innerTop": 120,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 6116,
+      "source": "outer onScroll",
+      "text": "目标 inner，自身 false，内层 y=120，外层 x=0",
+      "data": {
+        "at": 6306,
+        "phase": "program",
+        "owner": "outer",
+        "ownTarget": false,
+        "target": "inner",
+        "innerTop": 120,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 6465,
+      "source": "程序滚动后读取",
+      "text": "内层 y=120，外层 x=0、y=0；回调 内 1、外 1",
+      "data": {
+        "innerTop": 120,
+        "innerLeft": 0,
+        "outerTop": 0,
+        "outerLeft": 0,
+        "pageY": 0,
+        "phase": "program",
+        "counts": {
+          "inner": 1,
+          "outer": 1
+        },
+        "overflowY": "hidden",
+        "viewport": 100,
+        "content": 800,
+        "events": [
+          {
+            "at": 1475,
+            "kind": "touchstart",
+            "id": -1293288445,
+            "x": 120,
+            "y": 168,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1485,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 166,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1487,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 162,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1502,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 157,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1519.0000000000002,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 154,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1519.0000000000002,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 152,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1527.0000000000002,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 149,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 1535.0000000000002,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 146,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 1
+          },
+          {
+            "at": 1565,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 138,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 4
+          },
+          {
+            "at": 1578,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 133,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 7
+          },
+          {
+            "at": 1607,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 124,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 12
+          },
+          {
+            "at": 1619,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 119,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 15
+          },
+          {
+            "at": 1648.0000000000002,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 111,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 19
+          },
+          {
+            "at": 1665,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 106,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 22
+          },
+          {
+            "at": 1682,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 102,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 24
+          },
+          {
+            "at": 1698,
+            "kind": "touchmove",
+            "id": -1293288445,
+            "x": 120,
+            "y": 98,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 27
+          },
+          {
+            "at": 1716,
+            "kind": "touchend",
+            "id": -1293288445,
+            "x": 120,
+            "y": 98,
+            "trusted": true,
+            "innerTop": 0,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 29
+          },
+          {
+            "at": 6306,
+            "phase": "program",
+            "owner": "inner",
+            "ownTarget": true,
+            "target": "inner",
+            "innerTop": 120,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          },
+          {
+            "at": 6306,
+            "phase": "program",
+            "owner": "outer",
+            "ownTarget": false,
+            "target": "inner",
+            "innerTop": 120,
+            "innerLeft": 0,
+            "outerTop": 0,
+            "outerLeft": 0,
+            "pageY": 0
+          }
+        ]
+      }
+    }
+  ],
+  "afterCaptureEvents": [],
+  "lastReportAt": "2026-11-20T09:46:59.721Z",
+  "query": {},
+  "screenshots": [
+    {
+      "file": "gesture.png",
+      "capturedAt": "2026-11-20T09:46:59.354269+00:00",
+      "eventCount": 4,
+      "sha256": "bbaf25ce6e48f66b2d017a7acc22ce012ceb7c8dd8aca290b1f043958bde80ad"
+    },
+    {
+      "file": "program.png",
+      "capturedAt": "2026-11-20T09:47:00.637647+00:00",
+      "eventCount": 8,
+      "sha256": "4e44c5bb7295a867a159aec57ca16e12b0a89370e9fdf77d0a2f92bdfd9476f7"
+    }
+  ],
+  "inputs": [
+    {
+      "action": "drag",
+      "target": "swipe",
+      "startY": 0.85,
+      "endY": 0.12,
+      "duration": 0.25
+    },
+    {
+      "action": "tap",
+      "target": "read"
+    },
+    {
+      "action": "tap",
+      "target": "program"
+    }
+  ],
+  "inputMethod": "手机上的系统触摸"
+}

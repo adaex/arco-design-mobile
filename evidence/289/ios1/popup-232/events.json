@@ -1,0 +1,135 @@
+{
+  "scenario": "popup",
+  "version": "2.32.0",
+  "page": "popup-232.html",
+  "commit": "72f78e976347aa9f57858d414aba6063e7de62f6",
+  "run": "0fe681ce030b",
+  "startedAt": "2026-11-20T09:44:38.753Z",
+  "sampledAt": "2026-11-20T09:44:42.139Z",
+  "model": "iPhone 16 Pro",
+  "system": "iOS 18.5",
+  "browser": "Safari 18.5",
+  "devicePixelRatio": 3,
+  "events": [
+    {
+      "ms": 1704,
+      "source": "打开 Popup",
+      "text": "visible 改为 true",
+      "data": {
+        "trusted": true,
+        "openedAt": 2227
+      }
+    },
+    {
+      "ms": 2202,
+      "source": "onOpen",
+      "text": "弹层进入动画结束",
+      "data": {
+        "sinceOpen": 499
+      }
+    },
+    {
+      "ms": 3384,
+      "source": "读取 Popup",
+      "text": "公开句柄 存在，按钮可见",
+      "data": {
+        "readAt": 3907,
+        "trusted": true,
+        "handlePresent": true,
+        "afterOpenMs": 1680,
+        "afterShownMs": 1181,
+        "buttonHit": true,
+        "contentRect": {
+          "x": 0,
+          "y": 578,
+          "width": 402,
+          "height": 100
+        },
+        "contentOpacity": "1",
+        "maskOpacity": "1"
+      }
+    },
+    {
+      "ms": 3385.0000000000005,
+      "source": "dom",
+      "text": "页面 DIV 402 × 0　ref.dom = null",
+      "data": {
+        "readAt": 3907,
+        "field": "dom",
+        "selector": "arco-masking all-border-box arco-popup",
+        "connected": true,
+        "nodeType": "DIV",
+        "rect": {
+          "x": 0,
+          "y": 237,
+          "width": 402,
+          "height": 0
+        },
+        "publicValue": "null",
+        "identical": false
+      }
+    },
+    {
+      "ms": 3385.0000000000005,
+      "source": "mask",
+      "text": "页面 DIV 402 × 678　ref.mask = null",
+      "data": {
+        "readAt": 3907,
+        "field": "mask",
+        "selector": "arco-masking-mask arco-popup-mask arco-fade-enter-done",
+        "connected": true,
+        "nodeType": "DIV",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 402,
+          "height": 678
+        },
+        "publicValue": "null",
+        "identical": false
+      }
+    },
+    {
+      "ms": 3386,
+      "source": "content",
+      "text": "页面 DIV 402 × 100　ref.content = null",
+      "data": {
+        "readAt": 3907,
+        "field": "content",
+        "selector": "arco-masking-content arco-popup-content bottom arco-slide-from-bottom-enter-done",
+        "connected": true,
+        "nodeType": "DIV",
+        "rect": {
+          "x": 0,
+          "y": 578,
+          "width": 402,
+          "height": 100
+        },
+        "publicValue": "null",
+        "identical": false
+      }
+    }
+  ],
+  "afterCaptureEvents": [],
+  "lastReportAt": "2026-11-20T09:44:42.139Z",
+  "query": {},
+  "screenshots": [
+    {
+      "file": "screen.png",
+      "capturedAt": "2026-11-20T09:44:43.298045+00:00",
+      "eventCount": 6,
+      "sha256": "22931b83832de616778b6bbcdd0e2c5bceead1987461be571551ce5cd12e6fd0"
+    }
+  ],
+  "inputs": [
+    {
+      "action": "tap",
+      "target": "open"
+    },
+    {
+      "action": "tap",
+      "target": "read"
+    }
+  ],
+  "inputMethod": "手机上的系统触摸"
+}

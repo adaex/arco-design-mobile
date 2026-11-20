@@ -1,0 +1,77 @@
+{
+  "scenario": "sticky",
+  "version": "复审提交",
+  "page": "sticky-new.html",
+  "commit": "c40889165574a9a98be0eddda13d79bb0961a206",
+  "run": "5d55ab86a1ce",
+  "startedAt": "2026-11-20T09:46:08.348Z",
+  "sampledAt": "2026-11-20T09:46:08.702Z",
+  "model": "vivo V2458A",
+  "system": "Android 15",
+  "browser": "vivo Browser 23.6.10.2",
+  "devicePixelRatio": 3.5,
+  "events": [
+    {
+      "ms": 287.7000000476837,
+      "source": "DOM 读取",
+      "text": "顶边差 0.490 px，position=fixed",
+      "data": {
+        "requested": 0.49,
+        "at": 953,
+        "offset": 0.48999786376953125,
+        "scrollTop": 0,
+        "position": "fixed",
+        "headerTop": 100.58482360839844,
+        "containerTop": 100.58482360839844,
+        "placeholderTop": 101.07482147216797,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 320,
+      "source": "DOM 读取",
+      "text": "顶边差 0.510 px，position=fixed",
+      "data": {
+        "requested": 0.51,
+        "at": 985.3999999761581,
+        "offset": 0.5100021362304688,
+        "scrollTop": 0,
+        "position": "fixed",
+        "headerTop": 100.58482360839844,
+        "containerTop": 100.58482360839844,
+        "placeholderTop": 101.0948257446289,
+        "pageY": 0
+      }
+    },
+    {
+      "ms": 353.89999997615814,
+      "source": "DOM 读取",
+      "text": "顶边差 0.490 px，position=fixed",
+      "data": {
+        "requested": 0.49,
+        "at": 1019.3000000715256,
+        "offset": 0.48999786376953125,
+        "scrollTop": 0,
+        "position": "fixed",
+        "headerTop": 100.58482360839844,
+        "containerTop": 100.58482360839844,
+        "placeholderTop": 101.07482147216797,
+        "pageY": 0
+      }
+    }
+  ],
+  "afterCaptureEvents": [],
+  "lastReportAt": "2026-11-20T09:46:08.702Z",
+  "query": {
+    "mode": "controlled"
+  },
+  "screenshots": [
+    {
+      "file": "readings.png",
+      "capturedAt": "2026-11-20T09:46:09.646390+00:00",
+      "eventCount": 3,
+      "sha256": "da462095d1ffb739d0db1b9942a7b8e5891ce9bf5704cb260b4c7efc7da3fcf1"
+    }
+  ],
+  "inputMethod": "浏览器内受控布局与 DOM 读取"
+}
