@@ -1,0 +1,67 @@
+{
+  "pr": 419,
+  "commit": "d46f4f154b17ece88fd6fa8872195314c269ee24",
+  "run": "234feff5",
+  "browser": "Desktop Google Chrome 157.0.8103.80",
+  "platform": "macOS",
+  "capturedAt": "2026-11-20T05:15:39.269248+00:00",
+  "events": [
+    {
+      "ms": 276,
+      "source": "initial read",
+      "text": "viewport/content: 100/100 px   vertical thumb: false",
+      "data": {
+        "viewport": 100,
+        "content": 100,
+        "thumb": false
+      }
+    },
+    {
+      "ms": 833.5,
+      "source": "after insertion",
+      "text": "viewport/content: 100/600 px   vertical thumb: false",
+      "data": {
+        "viewport": 100,
+        "content": 600,
+        "thumb": false
+      }
+    },
+    {
+      "ms": 926.3999999761581,
+      "source": "after update()",
+      "text": "viewport/content: 100/600 px   vertical thumb: true",
+      "data": {
+        "viewport": 100,
+        "content": 600,
+        "thumb": true
+      }
+    },
+    {
+      "ms": 1548.8999999761581,
+      "source": "after LTR → RTL",
+      "text": "direction: rtl   thumb left = 0.00 px",
+      "data": {
+        "dir": "rtl",
+        "rel": 0
+      }
+    },
+    {
+      "ms": 1636.5,
+      "source": "after update()",
+      "text": "direction: rtl   thumb left = 133.34 px",
+      "data": {
+        "dir": "rtl",
+        "rel": 133.34375
+      }
+    },
+    {
+      "ms": 2049.8000000715256,
+      "source": "bottom-right",
+      "text": "thumb rectangles overlap by 1.98 × 2.00 CSS px",
+      "data": {
+        "dx": 1.9765625,
+        "dy": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "pr": 347,
+  "commit": "f528a26a4ea00f9e3ff66e23b84539f0ab6b70f5",
+  "run": "7cceb8b4",
+  "browser": "Desktop Google Chrome 157.0.8103.80",
+  "platform": "macOS",
+  "capturedAt": "2026-11-20T05:15:35.809687+00:00",
+  "events": [
+    {
+      "ms": 87.10000002384186,
+      "source": "DOM read",
+      "text": "top difference = 0.490 px   position = fixed",
+      "data": {
+        "requested": 0.49,
+        "offset": 0.48999786376953125,
+        "position": "fixed"
+      }
+    },
+    {
+      "ms": 120.70000004768372,
+      "source": "DOM read",
+      "text": "top difference = 0.510 px   position = static",
+      "data": {
+        "requested": 0.51,
+        "offset": 0.5100021362304688,
+        "position": "static"
+      }
+    },
+    {
+      "ms": 149.5,
+      "source": "DOM read",
+      "text": "top difference = 0.490 px   position = fixed",
+      "data": {
+        "requested": 0.49,
+        "offset": 0.48999786376953125,
+        "position": "fixed"
+      }
+    }
+  ]
+}

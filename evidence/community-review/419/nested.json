@@ -1,0 +1,69 @@
+{
+  "pr": 419,
+  "commit": "d46f4f154b17ece88fd6fa8872195314c269ee24",
+  "run": "85566c7b",
+  "browser": "Desktop Google Chrome 157.0.8103.80",
+  "platform": "macOS",
+  "capturedAt": "2026-11-20T05:15:37.104493+00:00",
+  "events": [
+    {
+      "ms": 276.3000000715256,
+      "source": "before wheel",
+      "text": "overflow-y: hidden   viewport/content: 100/800 px   scrollTop = 0",
+      "data": {
+        "overflowY": "hidden",
+        "clientHeight": 100,
+        "scrollHeight": 800,
+        "top": 0
+      }
+    },
+    {
+      "ms": 372.2000000476837,
+      "source": "wheel event",
+      "text": "deltaY = 130   trusted = true",
+      "data": {
+        "deltaY": 130,
+        "trusted": true
+      }
+    },
+    {
+      "ms": 678.1000000238419,
+      "source": "after wheel",
+      "text": "overflow-y: hidden   viewport/content: 100/800 px   scrollTop = 0",
+      "data": {
+        "overflowY": "hidden",
+        "clientHeight": 100,
+        "scrollHeight": 800,
+        "top": 0
+      }
+    },
+    {
+      "ms": 679,
+      "source": "set inner scrollTop",
+      "text": "setting inner viewport.scrollTop to 120",
+      "data": {
+        "top": 120
+      }
+    },
+    {
+      "ms": 685.8000000715256,
+      "source": "inner onScroll",
+      "text": "scrollTop = 120   scrollLeft = 0   target === currentTarget: true",
+      "data": {
+        "top": 120,
+        "left": 0,
+        "ownTarget": true
+      }
+    },
+    {
+      "ms": 685.8000000715256,
+      "source": "outer onScroll",
+      "text": "scrollTop = 0   scrollLeft = 0   target === currentTarget: false",
+      "data": {
+        "top": 0,
+        "left": 0,
+        "ownTarget": false
+      }
+    }
+  ]
+}

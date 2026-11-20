@@ -1,0 +1,67 @@
+{
+  "pr": 420,
+  "commit": "3f8d61b60876c6305a069e8796a16852973617a8",
+  "run": "cc2d5cbf",
+  "browser": "Desktop Google Chrome 157.0.8103.80",
+  "platform": "macOS",
+  "capturedAt": "2026-11-20T05:15:40.039405+00:00",
+  "events": [
+    {
+      "ms": 69.70000004768372,
+      "source": "onSubmit",
+      "text": "callback   {\"name\":\"A\"}",
+      "data": {
+        "mode": "callback",
+        "name": "onSubmit",
+        "values": {
+          "name": "A"
+        }
+      }
+    },
+    {
+      "ms": 103.5,
+      "source": "onSubmitFailed",
+      "text": "throw   {\"name\":\"A\"}",
+      "data": {
+        "mode": "throw",
+        "name": "onSubmitFailed",
+        "values": {
+          "name": "A"
+        }
+      }
+    },
+    {
+      "ms": 136.5,
+      "source": "onSubmitFailed",
+      "text": "reject   {\"name\":\"A\"}",
+      "data": {
+        "mode": "reject",
+        "name": "onSubmitFailed",
+        "values": {
+          "name": "A"
+        }
+      }
+    },
+    {
+      "ms": 138.29999995231628,
+      "source": "Validator callback",
+      "text": "first = false   {\"name\":[{}]}",
+      "data": {
+        "result": {
+          "name": [
+            {}
+          ]
+        }
+      }
+    },
+    {
+      "ms": 641.2000000476837,
+      "source": "Timer read",
+      "text": "null-prototype reason   after 502 ms   callbacks = 0",
+      "data": {
+        "elapsed": 501.90000009536743,
+        "calls": 0
+      }
+    }
+  ]
+}

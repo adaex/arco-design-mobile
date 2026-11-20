@@ -1,0 +1,48 @@
+{
+  "pr": 402,
+  "commit": "3fa420a3e11bca3fe6d196d79f963240b4b3fd04",
+  "run": "da74365e",
+  "browser": "Desktop Google Chrome 157.0.8103.80",
+  "platform": "macOS",
+  "capturedAt": "2026-11-20T05:15:36.300753+00:00",
+  "events": [
+    {
+      "ms": 6.600000023841858,
+      "source": "easing(x)",
+      "text": "x = 0.4996\nreturned  0.43057616749580535\nreference 0.4305761674958077",
+      "data": {
+        "x": 0.4996,
+        "actual": 0.43057616749580535,
+        "reference": 0.4305761674958077
+      }
+    },
+    {
+      "ms": 6.699999928474426,
+      "source": "easing(x)",
+      "text": "x = 0.4999999999999945\nreturned  0.4999833809269542\nreference 0.4999833245944529",
+      "data": {
+        "x": 0.4999999999999945,
+        "actual": 0.4999833809269542,
+        "reference": 0.4999833245944529
+      }
+    },
+    {
+      "ms": 6.699999928474426,
+      "source": "easing(x)",
+      "text": "x = 0.49999999999999456\nreturned  0.49998326864376175\nreference 0.4999833809307119",
+      "data": {
+        "x": 0.49999999999999456,
+        "actual": 0.49998326864376175,
+        "reference": 0.4999833809307119
+      }
+    },
+    {
+      "ms": 6.699999928474426,
+      "source": "difference",
+      "text": "last output minus previous output = -1.12283192e-7",
+      "data": {
+        "difference": -1.1228319246603391e-07
+      }
+    }
+  ]
+}
